@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ROOT */
+:root {
+
+    /* colors */
+    --span-orange: #FF8900;
+    --white: #FFF;
+    --gray-orange: #ECE8E7;
+
+    /* typography */
+    --fs-1: 4.2rem;
+    --fs-2: 3.6rem;
+    --fs-3: 2.4rem;
+    --fs-4: 1.6rem;
+    --fs-5: 1.4rem;
+    --fs-6: 1rem;
+
+    --f-poppins: 'Poppins';
+
+}
+
+/* RESET STYLES */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer !important;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* REUSED STYLES */
+
+.section {
+    padding-block: 60px;
+}
+
+.section__title {
+    font-size: 2rem;
+}
+
+.container {
+    padding-inline: 3.5rem;
+}
+
+.btn {
+    padding: .8rem 1.2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    font-weight: 800;
+    transition: .3s ease-in-out;
+}
+
+.btn__primary {
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.rotate {
+    padding: .6rem 1rem;
+    transform: rotate(-1deg);
+}
+
+.white {
+    background-color: white;
+}
+
+.orange {
+    background-color: var(--span-orange);
+}
+
+.input__submit {
+    position: relative;
+    background-color: var(--white);
+    padding: .7rem 1rem;
+    border-radius: .4rem;
+    max-width: max-content;
+    margin: auto;
+}
+
+input.input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+    z-index: 10;
+}
+
+.header .logo a {
+    color: #000;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header .nav__item a {
+    color: #000;
+}
+
+/* HERO */
+
+.hero .container {
+    background-color: var(--gray-orange);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    padding-block: 130px;
+    overflow: hidden;
+}
+
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__text h1 {
+    font-size: 5rem;
+}
+
+.hero__info {
+    margin-top: 1rem;
+}
+
+.hero__info p {
+    font-size: var(--fs-5);
+}
+
+.hero__buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.btn__hero {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    border-radius: .4rem !important;
+    padding: .6rem 1rem;
+}
+
+.btn__hero i {
+    font-size: 2rem;
+}
+
+.playstore__img {
+    object-fit: cover;
+}
+
+.hero__binfo {
+    text-align: left;
+}
+
+.hero__binfo span {
+    font-size: .6rem !important;
+}
+
+.hero__img {
+    position: relative;
+    bottom: -80px;
+}
+
+.hero__img img {
+    filter: drop-shadow(30px 0 var(--white)) drop-shadow(30px 0 var(--span-orange));
+}
+
+/* NEW ARRIVALS */
+
+.arrivals {
+    margin-top: 100vh;
+}
+
+.arrivals__lists {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.arrivals__item {
+    width: 100%;
+}
+
+.arrivals__item img {
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover;
+}
+
+.arrivals__item__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.arrivals__item__content button {
+    font-size: 1.5rem;
+}
+
+/* BANNER */
+
+.banner .container {
+    background-color: var(--span-orange);
+    overflow: hidden;
+}
+
+.banner__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+}
+
+.banner__img {
+    position: relative;
+    height: 100%;
+    bottom: -3px;
+}
+
+.banner__img img {
+    object-fit: cover;
+}
+
+.banner__info {
+    padding-block: 2.5rem;
+    flex: 1;
+}
+
+.banner__info .h2 {
+    font-size: 4.2rem;
+    width: max-content;
+}
+
+.banner__text {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.banner__date {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.banner__buttons {
+    margin-top: 1rem;
+}
+
+.btn__primary {
+    border-radius: .3rem;
+}
+
+
+/* STORE */
+
+.store .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.store__content {
+    flex: .7;
+}
+
+.store .section__title {
+    font-size: 3.2rem;
+}
+
+.store .section__text {
+    font-size: 1.2rem;
+    text-align: gray;
+    margin-block: 1rem;
+}
+
+.store__lists {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+    justify-self: flex-start;
+}
+
+.store__item {
+    padding: 1rem;
+    border-radius: .4rem;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    transition: .3s ease-in-out;
+}
+
+.store__item:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.store__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* OFFER */
+
+.offer__lists {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.offer__item {
+    width: 100%;
+}
+
+.offer__item img {
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover;
+}
+
+.offer__item__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.offer__item__content button {
+    font-size: 1.5rem;
+}
+
+/* Application */
+
+.application .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.application__content {
+    flex: .7;
+}
+
+.application .section__title {
+    font-size: 2.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.application .section__text {
+    font-size: 1.4rem;
+    text-align: gray;
+    margin-block: 1rem;
+}
+
+.application__img {
+    flex: 1;
+}
+
+.application__img .apk {
+    position: relative;
+    left: 50%;
+    transform: translateX(-30%);
+}
+
+
+/* BANNER CONTACT */
+
+.banner__contact {
+    padding-bottom: 0;
+}
+
+.banner__contact .container {
+    background-color: var(--span-orange);
+    padding-block: 8rem;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.contact__content .section__text {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: bisque;
+}
+
+.contact__content .input__submit {
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__content .input {
+    flex: .95;
+}
+
+.contact__content .btn {
+    padding: .6rem .8rem;
+}
+
+
+/* FOOTER */
+
+.footer .container {
+    background-color: #000;
+    color: #fff;
+    padding-block: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+.footer__brand {
+    align-self: flex-start;
+    font-size: 1rem;
+}
+
+.footer__brand .logo h1 a {
+    color: #fff;
+}
+
+.footer__brand .address {
+    margin-top: 1rem;
+    color: darkgray;
+    font-size: 1.1rem;
+}
+
+.footer__lists {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 10rem;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__links li:first-child {
+    margin-bottom: 1rem !important;
+    font-size: 1.2rem;
+}
+
+.footer__link {
+    color: darkgray;
+    font-size: 1rem;
+}
+
+.social__links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .9rem;
+}
+
+.social__links li {
+    background-color: var(--span-orange);
+    border-radius: 1.5rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.social__links li:first-child {
+    margin-bottom: 0 !important;
+}
+
+.social__links li a {
+    color: #fff;
+}
+
+.social__links li:is(:hover, :focus-visible) {
+    background-color: var(--white);
+}
+
+.social__links li:is(:hover, :focus-visible) a {
+    color: var(--span-orange);
+}
+
+
+
+

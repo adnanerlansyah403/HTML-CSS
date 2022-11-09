@@ -1,0 +1,14 @@
+
+:root {
+
+}
+
+/* REUSABLE STYLE */
+.container {
+    padding-inline: 4rem;
+}
+
+.section {
+    padding-block: 60px;
+}
+
