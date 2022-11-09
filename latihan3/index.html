@@ -15,21 +15,6 @@
 
 </head>
 <body>
-    
-    <!-- <nav>
-        <div class="container">
-            <div class="header">
-                <h1>Rondovision</h1>
-                <ul>
-                    <li><a href="#" class="">Home</a></li>
-                    <li><a href="#" class="">Best Seller</a></li>
-                    <li><a href="#" class="">All under $10</a></li>
-                    <li><a href="#" class="">Reviews</a></li>
-                    <li><button class="signUp">Sign Up</button></li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
 
     <header class="header container">
 
@@ -56,6 +41,34 @@
                 <button class="btn btn__primary">Sign Up</button>
             </div>
         </nav>
+
+        <div class="nav_menu_mobile">
+
+            <button class="btn nav__button" data-nav-open>
+                <i class="uil uil-bars" id="nav__action"></i>
+            </button>
+
+            <ul class="nav__menu__list">
+                <li>
+                    <a href="#home" class="nav__menu__link">Home</a>
+                </li>
+                <li>
+                    <a href="#best" class="nav__menu__link">Best Seller Sale</a>
+                </li>
+                <li>
+                    <a href="#under" class="nav__menu__link">All Under 30%</a>
+                </li>
+                <li>
+                    <a href="#home" class="nav__menu__link">Reviews</a>
+                </li>
+                <li class="nav__menu__button">
+                    <button class="btn btn__primary">
+                        Sign Up
+                    </button>
+                </li>
+            </ul>
+
+        </div>
 
     </header>
 
@@ -130,7 +143,7 @@
                                     Buy now
                                 </div>
                                 <button class="btn">
-                                    <i class="uil uil-arrow-right"></i>
+                                    <img src="./assets/images/arrow-right.png" height="40" alt="">
                                 </button>
                             </div>
 
@@ -148,7 +161,7 @@
                                     Buy now
                                 </div>
                                 <button class="btn">
-                                    <i class="uil uil-arrow-right"></i>
+                                    <img src="./assets/images/arrow-right.png" height="40" alt="">
                                 </button>
                             </div>
 
@@ -166,7 +179,7 @@
                                     Buy now
                                 </div>
                                 <button class="btn">
-                                    <i class="uil uil-arrow-right"></i>
+                                    <img src="./assets/images/arrow-right.png" height="40" alt="">
                                 </button>
                             </div>
 
@@ -187,8 +200,8 @@
                         </div>
                         <div class="banner__info">
                             <div class="rotate white h2">
-                                <span>CLASSIC</span>
-                            </div> <br>
+                                <span>PAYDAY</span>
+                            </div> <br><br>
                             <h1 class="h2">SALE NOW</h1>
 
                             <p class="banner__text">
@@ -278,7 +291,7 @@
                                     Buy now
                                 </div>
                                 <button class="btn">
-                                    <i class="uil uil-arrow-right"></i>
+                                    <img src="./assets/images/arrow-right.png" height="40" alt="">
                                 </button>
                             </div>
 
@@ -296,7 +309,7 @@
                                     Buy now
                                 </div>
                                 <button class="btn">
-                                    <i class="uil uil-arrow-right"></i>
+                                    <img src="./assets/images/arrow-right.png" height="40" alt="">
                                 </button>
                             </div>
 
@@ -467,6 +480,38 @@
 
         </div>
     </footer>
+
+    <script>
+
+        const header = document.querySelector('.header');
+        const btnNavOpen = document.querySelector('[data-nav-open]');
+        const navMobile = document.querySelector('.nav__menu__list');
+        const btnNavAction = document.getElementById('nav__action');
+
+        btnNavOpen.addEventListener('click', () => {
+            navMobile.classList.toggle('active');
+            if(navMobile.classList.contains('active')) {
+                btnNavAction.classList.remove('uil-bars')
+                btnNavAction.classList.add('uil-times')
+            } else {
+                btnNavAction.classList.remove('uil-times')
+                btnNavAction.classList.add('uil-bars')
+            }
+        })
+        
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 300) {
+                header.classList.add('active');
+                navMobile.classList.remove('active');
+                btnNavAction.classList.remove('uil-times')
+                btnNavAction.classList.add('uil-bars')
+            } else {
+                header.classList.remove('active');
+            }
+
+        });
+
+    </script>
 
 </body>
 </html>
