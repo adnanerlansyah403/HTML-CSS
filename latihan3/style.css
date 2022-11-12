@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto+Condensed:wght@400;700&display=swap');
 
 /* ROOT */
 :root {
@@ -17,6 +18,7 @@
     --fs-6: 1rem;
 
     --f-poppins: 'Poppins';
+    --f-robotoc: 'Roboto Condensed', sans-serif;
 
 }
 
@@ -28,6 +30,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--f-robotoc);
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 li {
@@ -36,10 +43,6 @@ li {
 
 a {
     text-decoration: none;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 button {
@@ -131,6 +134,11 @@ input.input {
     border: none;
 }
 
+.logo a {
+    color: #000;
+    font-style: italic;
+}
+
 /* HEADER */
 
 .nav_menu_mobile {
@@ -157,10 +165,6 @@ input.input {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.header .logo a {
-    color: #000;
-}
-
 .header nav {
     display: flex;
     align-items: center;
@@ -175,6 +179,11 @@ input.input {
 
 .header .nav__item a {
     color: #000;
+    transition: .2s ease;
+}
+
+.header .nav__item:hover a {
+    color: darkgray;
 }
 
 /* HERO */
@@ -245,6 +254,9 @@ input.input {
 
 .hero__img img {
     filter: drop-shadow(30px 0 var(--white)) drop-shadow(30px 0 var(--span-orange));
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* NEW ARRIVALS */
@@ -331,6 +343,10 @@ input.input {
 
 .banner__buttons {
     margin-top: 1rem;
+}
+
+.banner__buttons .btn {
+    font-size: 1.3rem;
 }
 
 .btn__primary {
@@ -455,7 +471,14 @@ input.input {
 .application__img .apk {
     position: relative;
     left: 50%;
-    transform: translateX(-30%);
+    transform: translateX(-50%);
+}
+
+.application__img .apk img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
 }
 
 
@@ -594,6 +617,11 @@ input.input {
 
     .nav__button {
         font-size: 1.4em;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
     }
 
     .nav__button:hover {
@@ -646,6 +674,24 @@ input.input {
         background-color: lightgray;
     }
 
+    .nav__menu__list li:is(:hover, :focus-visible) .nav__menu__link img {
+        animation: stab 1s ease-in-out infinite;
+    }
+
+    @keyframes stab {
+        0% {
+            transform: translateX(0);
+        }
+    
+        50% {
+            transform: translateX(5px);
+        }
+    
+        100% {
+            transform: translateX(1px);
+        }
+    }
+
     .nav__menu__list li a {
         color: #000;
         font-weight: 600;
@@ -653,6 +699,12 @@ input.input {
     
     .nav__menu__list button.btn.btn__primary {
         width: 100%;
+    }
+
+    .nav__menu__link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .hero__content {
@@ -687,7 +739,7 @@ input.input {
     }
 
     .offer__lists {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .banner__img {
@@ -756,6 +808,10 @@ input.input {
     }
 
     .arrivals__lists {
+        grid-template-columns: 1fr;
+    }
+
+    .offer__lists {
         grid-template-columns: 1fr;
     }
 
