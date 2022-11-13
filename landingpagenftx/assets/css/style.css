@@ -3,7 +3,7 @@
 
 /* ROOT */
 
-/* RESET STYLES */
+/* f STYLES */
 
 body {
     margin: 0;
@@ -15,13 +15,17 @@ section {
     margin-bottom: 150px;
 }
 
-ul, ol, p, figure {
+h1,h2,h3,h4,h5, ul, ol, p, figure {
     margin: 0;
     padding: 0;
 }
 
 ul li {
     list-style: none;
+}
+
+button {
+    border: none;
 }
 
 
@@ -713,6 +717,7 @@ ul li {
 
 #testimonial .testi-content {
     margin-top: 74px;
+    padding: 0 12px;
 }
 
 #testimonial .testi-lists {
@@ -788,6 +793,8 @@ ul li {
     background-color: #293241;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    margin: 0 12px;
 }
 
 #banner .container .banner-details h1 {
@@ -830,7 +837,11 @@ ul li {
 
 /* FOOTER */
 
-.footer .container {
+#footer {
+    padding-top: 364px;
+}
+
+#footer .container {
     display: flex;
     align-items: center;
     gap: 172px;
