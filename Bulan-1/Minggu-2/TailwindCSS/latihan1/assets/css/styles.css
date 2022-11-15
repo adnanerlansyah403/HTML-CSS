@@ -1,0 +1,41 @@
+
+#header .menu-navigation a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: #656464;
+}
+#header .menu-navigation a.active {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: #2B2B39;
+}
+#header .menu-action form input {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    /* text-align: center; */
+
+    color: #686868;
+}
+
+#header .menu-action .button-box button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #FFFFFF;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCSS</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
+</head>
+<body>
+
+    <section id="navbar" class="fixed top-0 w-full z-20">
+        <div class="container mx-auto h-14 bg-gradient-to-r from-cyan-500 to-blue-500">
+            <div class="block">
+                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 float-left px-4 py-6">asadsa</div>
+            </div>
+            <div class="block">
+                <div class="bg-gradient-to-r from-cyan-500 to-green-500 float-right px-6 py-4">asda</div>
+            </div>
+
+            <div class="clear-both"></div>
+        </div>
+
+        <div class="container mx-auto sticky top-0 h-14 bg-red-300 z-10"></div>
+
+        <div class="container mx-auto columns-3">
+            <div class="relative">
+                <img src="./assets/images/dashboard.png" alt="" class=" bg-cyan-300">
+
+                <div class="absolute h-full w-full bg-stone-900 top-0 left-0 opacity-0 hover:opacity-100 p-8 transition delay-150 ease-in-out rounded-lg">
+                    <h1 class="text-white">Dashboard</h1>
+                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, adipisci.</p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="./assets/images/dashboard.png" alt="" class=" bg-cyan-300">
+
+                <div class="absolute h-full w-full bg-stone-900"></div>
+            </div>
+            <div class="relative">
+                <img src="./assets/images/dashboard.png" alt="" class=" bg-cyan-300">
+
+                <!-- <div class="absolute h-full w-full bg-stone-900"></div> -->
+            </div>
+        </div>
+
+        <div class="container mx-auto">
+            <div class="text-5xl font-extrabold ...">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+                  Hello world
+                </span>
+              </div>
+        </div>
+
+        <div class="h-96"></div>
+        <div class="h-96"></div>
+        <div class="h-96"></div>
+        <div class="h-96"></div>
+        <div class="h-96"></div>
+        <div class="h-96"></div>
+    </section>
+    
+</body>
+</html>
