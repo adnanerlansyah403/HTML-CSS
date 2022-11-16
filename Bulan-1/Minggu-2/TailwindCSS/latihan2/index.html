@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -39,85 +39,149 @@
 
     <style type="text/tailwindcss">
         @layer utilities {
-            .section {
-                padding-block: 96px;
-            }
-            input {
-                font-family: "Inter";
-                background-color: transparent;
-                outline: none;
-                border: none;
-            }
-            .bg-hero {
-                background: linear-gradient(311.76deg, #D4E7FE -15.24%, #FFFFFF 78.85%);
-            }
-            .text-title {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 56px;
-                line-height: 66px;
-                color: #0A093D;
-            }
-            .text-subtitle {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 28px;
-                color: #656464;
-                
-            }
-
-            .btn {
-                padding: 24px 48px;
-                color: #ffffff;
-                text-align: center;
-                font-weight: 400;
-                border-radius: 14px;
-            }
-            
-            .bg-primary-white {
-                background-color: rgba(33, 123, 244, .2);
-            }
-
-            .btn-primary {
-                background-color: #217BF4;
-            }
-
-            .btn-secondary {
-                background-color: #ffffff;
-                border: 1px solid #217BF4;
-                color: #217BF4 !important;
-            }
-            .li-radio {
-                position: relative;
-            }
             .li-radio {
                 @apply before:content-[url('./assets/images/icons/list-radio.svg')] before:bg-no-repeat before:bg-cover before:w-[18px] before:h-[18px] flex items-center
 
             }
-            .li-radio p {
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 18px;
-                line-height: 18px;
-                color: #171648;
+            .col-4 {
+                width: calc(100% / 3);
             }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-5 {
+                width: calc(100% / 5);
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+            .col-12 {
+                width: calc(100% * 12 / 12);
+            }
+            .left-effect {
+                position: relative;
+                animation: leftShow .8s ease-in-out;
+            }
+            @keyframes leftShow {
+                from { left: -50%; opacity: 0; }
+                to { left: 0; opacity: 1; };
+            }
+            .right-effect {
+                position: relative;
+                animation: rightShow .8s ease-in-out;
+            }
+            @keyframes rightShow {
+                from { right: -50%; opacity: 0; }
+                to { right: 0; opacity: 1; };
+            }
+            .top-effect {
+                position: relative;
+                animation: topShow .8s ease-in-out;
+            }
+            @keyframes topShow {
+                from { transform: translateY(-10%); opacity: 0; }
+                to { transform: translateY(0);pacity: 1; };
+            }
+            .bottom-effect {
+                position: relative;
+                animation: bottomShow .8s ease-in-out;
+            }
+            @keyframes bottomShow {
+                from { transform: translateY(25%); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; };
+            }
+            .anim-bounce { animation: moving 1s ease-in-out infinite alternate; }
+
+            @keyframes moving {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+            }
+
+            
         }
     </style>
 
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Flowbite CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 <body>
 
-    <div class="bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)]">
-        <section id="header" class="pt-[22px] pb-[26px] border-b-2 border-gray-300 sticky top-0">
+    
+    <nav class="lg:hidden fixed w-full bg-white/90 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:shadow-lg z-30">
+        <div class="container flex flex-col flex-wrap lg:flex-row items-center justify-between mx-auto gap-4">
+            <div class="flex flex-wrap items-center justify-between w-full">
+                <a href="./index.html" class="flex items-center">
+                    <img src="./assets/images/netbook.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700" data-aos="fade-down">
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-[#217BF4] rounded md:bg-transparent md:text-[#217BF4] md:p-0 dark:text-white" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Community</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+                        </li>
+                        <li>
+                            <div class="py-2 pl-3 pr-4 menu-action flex flex-col items-start gap-4 mt-4 md:mt-0 md:hidden">
+                                <div class="search-box flex items-center gap-2 relative w-full h-full">
+                                    <img src="./assets/images/icons/search.svg" class="object-contain w-5 h-5" alt="">
+                                    <form action="" class="flex-auto">
+                                        <input type="text" placeholder="Search here ..." class="py-[18px] w-full outline-none border-none bg-transparent focus:ring-transparent">
+                                    </form>
+                                </div>
+                                <div class="button-box w-full">
+                                    <button class="w-full py-[18px] px-[48px] rounded-lg text-white text-center btn-primary">Log In</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="hidden menu-action md:flex items-center gap-10 w-full">
+                <div class="search-box flex items-center gap-2 relative flex-auto">
+                    <img src="./assets/images/icons/search.svg" class="w-6 h-6 object-contain" alt="">
+                    <form action="" class="w-full">
+                        <input type="text" placeholder="Search here ..." class="border-none transparent outline-none w-full pt-[18px] pb-[18px] rounded-lg bg-transparent focus:ring-transparent">
+                    </form>
+                </div>
+                <div class="button-box">
+                    <button class="py-[18px] px-[48px] rounded-lg text-white text-center btn-primary">Log In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+  
+
+    <div class="bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)] pt-[60px] md:pt-[110px] lg:pt-0">
+        <section id="header" class="hidden lg:flex items-center pt-[22px] pb-[26px] bg-white/90 border-b-2 border-gray-300 sticky top-0 z-30">
             <div class="container flex items-center justify-between">
                 
-                <div class="menu-navigation left-side flex items-center gap-[72px]">
+                <div class="menu-navigation left-side flex items-center gap-[70px]">
                     <img src="./assets/images/netbook.png" alt="">
                     <ul class="flex items-center gap-8">
                         <li>
@@ -142,7 +206,7 @@
                     <div class="search-box flex items-center gap-2 relative border-b-2 border-gray-200 pb-[18px]">
                         <img src="./assets/images/icons/search.svg" class="w-3 h-3 object-contain" alt="">
                         <form action="">
-                            <input type="text" placeholder="Search here ..." class="border-none transparent outline-none">
+                            <input type="text" placeholder="Search here ..." class="border-none bg-transparent outline-none rounded-lg focus:ring-transparent">
                         </form>
                     </div>
                     <div class="button-box">
@@ -154,26 +218,26 @@
         </section>
     
         <section id="hero">
-            <div class="container pt-[72px] pb-[82px]">
+            <div class="container pt-[72px] md:pt-[148px] pb-[82px]">
     
                 <div class="content flex items-end flex-wrap md:flex-nowrap flex-auto gap-[69px]">
                     
-                    <div class="hero-text text-left">
+                    <div class="hero-text text-left left-effect">
                         <span class="py-3 px-8 bg-primary-white text-primary rounded-[8px] font-semibold">Netbook community</span>
     
                         <h1 class="pt-[24px] pb-[18px] text-title">Your Solutions for Community</h1>
                         <p class="text-subtitle leading-7 max-w-[450px]">More than 2 billion people in over countries use socibook to stay in touch with friends & family</p>
     
-                        <div class="button-wrapper flex items-center gap-[18px] mt-[42px]">
+                        <div class="button-wrapper flex flex-wrap items-center gap-[18px] mt-[42px]">
         
-                            <button class="btn btn-primary">About More</button>
-                            <button class="btn btn-secondary">Invite Friend</button>
+                            <button class="w-full md:w-max btn btn-primary">About More</button>
+                            <button class="w-full md:w-max btn btn-secondary">Invite Friend</button>
         
                         </div>
                     </div>
     
-                    <div class="object-cover">
-                        <img src="./assets/images/clients.png" alt="">
+                    <div class="object-cover right-effect">
+                        <img src="./assets/images/clients.png" class="anim-bounce" alt="">
                     </div>
     
                 </div>
@@ -185,9 +249,9 @@
     <section id="social-network" class="section">
         <div class="container">
 
-            <div class="content flex items-end gap-[69px]">
+            <div class="content flex flex-wrap-reverse gap-5 lg:gap-0 lg:flex-nowrap justify-between">
                 
-                <div class="details">
+                <div class="details pt-[64px] top-effect">
                     <span class="py-3 px-8 bg-primary-white text-primary rounded-[8px] font-semibold">Netbook community</span>
 
                     <h1 class="text-title mt-[10px]">Why Join to Netbook Social Network?</h1>
@@ -210,14 +274,484 @@
 
                 </div>
 
-                <div class="images flex-auto">
-                    <img src="./assets/images/teams.png" class="w-full h-full object-cover" alt="">
+                <div class="images flex items-center lg:justify-end w-full gap-[29px] bottom-effect">
+                    <div class="video w-full md:w-auto">
+                        <img src="./assets/images/video.png" class="w-full md:w-auto" alt="">
+                    </div>
+                    <div class="img-team w-full md:w-auto">
+                        <img src="./assets/images/team1.png" class="mb-[32px] w-full md:w-auto" alt="">
+                        <img src="./assets/images/team2.png" class="w-full md:w-auto" alt="">
+                    </div>
                 </div>
 
             </div>
 
         </div>
     </section>
+
+    <section id="review" class="section">
+        <div class="container">
+
+            <div class="card-wrapper flex-wrap left-effect">
+                <div class="max-w-none md:max-w-[336px] card-item border-[1px] border-gray-300 shadow-lg">
+                    <div class="card-header">
+                        <div class="flex items-center gap-[10px]">
+                            <img src="./assets/images/icons/star-blue.svg" alt="">
+                            <h3 class="font-semibold">4.8 Rating</h3>
+                        </div>
+                        <div class="pt-9 pb-10 flex items-center gap-4">
+                            <div class="img-users flex overflow-hidden">
+                                  <img class="" src="./assets/images/client1.png" alt=""/>
+                                  <img class="" src="./assets/images/client2.png" alt=""/>
+                                  <img class="" src="./assets/images/client3.png" alt=""/>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-primary">+836k</span> &nbsp;
+                                <p>Members</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                        </p>
+                        <a href="" class="text-primary mt-10 flex items-center gap-2">
+                            Join Our Community
+                            <img src="./assets/images/icons/arrow-right-blue.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="max-w-none md:max-w-[336px] card-item border-[1px] border-gray-300 shadow-lg">
+                    <div class="card-header">
+                        <div class="flex items-center gap-[10px]">
+                            <img src="./assets/images/icons/trophy-blue.svg" alt="">
+                            <h3 class="font-semibold">Awwwards</h3>
+                        </div>
+                        <div class="pt-9 pb-10 flex items-center gap-4">
+                            <img src="./assets/images/icons/github-icon.svg" width="24" height="24" alt="">
+                            <div class="flex items-center">
+                                <p>Best of <span class="text-primary">2021 </span>on Github</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                        </p>
+                        <a href="" class="text-secondary mt-10 flex items-center gap-2">
+                            Go To Awards
+                            <img src="./assets/images/icons/arrow-right-gray.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="max-w-none md:max-w-[336px] card-item">
+                    <div class="card-header">
+                        <span class="text-primary">Our Achievement</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="pt-[10px] pb-[18px]">We are Connecting You The Digital Life</h3>
+                        <p>
+                            The scope the Social Media becomes curcial Is helps the business to directly engage with their needs and wants.
+                        </p>
+                        <button class="btn btn-primary mt-10 flex items-center gap-2">
+                            Discover me
+                            <img src="./assets/images/icons/arrow-right-white.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="community" class="section">
+        <div class="container text-center">
+
+            <div class="top-effect">
+                <span class="text-primary">Our Community</span>
+                <h1 class="text-title pt-[9px] pb-[19px]">Community Main Feature</h1>
+                <div class="flex items-center justify-center">
+                    <p class="text-subtitle md:col-4">
+                        The wise man therefore always holds in these matters to this principle of selection
+                    </p>
+                </div>
+            </div>
+
+            <div class="content pt-[64px] right-effect">
+
+                <div class="card-wrapper grid grid-cols-1 md:grid-cols-2 gap-[44px]">
+                    <div class="card-item shadow-lg flex items-start flex-wrap md:flex-nowrap text-center md:text-left gap-9">
+                        <div class="img-logo w-auto mx-auto md:mx-0">
+                            <img src="./assets/images/members-logo.png" alt="">
+                        </div>
+                        <div class="summary-info">
+                            <h3>Members, Friends</h3>
+                            <p class="text-subtitle text-left">
+                                Members, Friends Connection ( like followers ), Private Message
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-item shadow-lg flex items-start flex-wrap md:flex-nowrap text-center md:text-left gap-9">
+                        <div class="img-logo w-auto mx-auto md:mx-0">
+                            <img src="./assets/images/groups-logo.png" alt="">
+                        </div>
+                        <div class="summary-info">
+                            <h3>Groups</h3>
+                            <p class="text-subtitle">
+                                Your users can create groups to let other users to join and talk
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-item shadow-lg flex items-start flex-wrap md:flex-nowrap text-center md:text-left gap-9">
+                        <div class="img-logo w-auto mx-auto md:mx-0">
+                            <img src="./assets/images/forum-logo.png" alt="">
+                        </div>
+                        <div class="summary-info">
+                            <h3>Forum</h3>
+                            <p class="text-subtitle">
+                                Forum is ready by BBPress. Your users can make topics and talk.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-item shadow-lg flex flex-wrap md:flex-nowrap items-start text-center md:text-left gap-9">
+                        <div class="img-logo w-auto mx-auto md:mx-0">
+                            <img src="./assets/images/custom-logo.png" alt="">
+                        </div>
+                        <div class="summary-info">
+                            <h3>List Builder</h3>
+                            <p class="text-subtitle">
+                                Members, Groups list can be modified by drag & drop live builder.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-item shadow-lg flex flex-wrap md:flex-nowrap items-start text-center md:text-left gap-9">
+                        <div class="img-logo w-auto mx-auto md:mx-0">
+                            <img src="./assets/images/list-logo.png" alt="">
+                        </div>
+                        <div class="summary-info">
+                            <h3>List Builder</h3>
+                            <p class="text-subtitle">
+                                Members, Groups list can be modified by drag & drop live builder.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-item shadow-lg flex items-start flex-wrap md:flex-nowrap text-center md:text-left gap-9">
+                        <div class="img-logo w-auto mx-auto md:mx-0">
+                            <img src="./assets/images/list-scroll-logo.png" alt="">
+                        </div>
+                        <div class="summary-info">
+                            <h3>List Scroll Effects</h3>
+                            <p class="text-subtitle">
+                                8 different scroll effect are ready.
+                                You can always change by your tastes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="members" class="section">
+        <div class="container text-center mx-auto">
+
+            <div class="top-effect">
+                <span class="text-primary">Valueable Team</span>
+                <h1 class="text-title pt-[10px] pb-[18px]">Our Active Member</h1>
+                <div class="flex items-center justify-center">
+                    <p class="text-subtitle md:col-4">when an unknown printer took a gallery of type and meeting fari scrambled it.</p>
+                </div>
+            </div>
+
+            <div class="tabs-wrapper mt-[38px] mb-[44px] left-effect">
+                <ul class="flex items-center md:flex-row max-w-[474px] h-[72px] mx-auto">
+                    <li class="tabs-item">
+                        <button>Newst</button>
+                    </li>
+                    <li class="tabs-item">
+                        <button>Popular</button>
+                    </li>
+                    <li class="tabs-item active">
+                        <button>Active</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content right-effect">
+
+                <div class="card-wrapper flex-wrap md:flex-nowrap">
+                    <div class="card-item w-full md:w-max mx-auto border-[1px] border-gray-300">
+                        <div class="img-member flex items-center justify-center">
+                            <img src="./assets/images/member-2.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h6 class="mt-[29px] pb-[14px]">Fahim Rahman</h6>
+                            <p>@Rahman</p>
+                        </div>
+                    </div>
+                    <div class="card-item w-full md:w-max mx-auto border-[1px] border-gray-300">
+                        <div class="img-member flex items-center justify-center">
+                            <img src="./assets/images/member-2.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h6 class="pt-[29px] pb-[14px]">Masterero Ali</h6>
+                            <p>@Master</p>
+                        </div>
+                    </div>
+                    <div class="card-item w-full md:w-max mx-auto border-[1px] border-gray-300">
+                        <div class="img-member flex items-center justify-center">
+                            <img src="./assets/images/member-2.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h6 class="pt-[29px] pb-[14px]">Kazi Rahman</h6>
+                            <p>@Rahman</p>
+                        </div>
+                    </div>
+                    <div class="card-item w-full md:w-max mx-auto border-[1px] border-gray-300">
+                        <div class="img-member flex items-center justify-center">
+                            <img src="./assets/images/member-4.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h6 class="pt-[29px] pb-[14px]">Alia Karon</h6>
+                            <p>@Alla</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="application" class="section overflow-hidden" style="background-color: rgba(3, 94, 202, .2);">
+        <div class="container relative">
+
+            <div class="content flex flex-wrap md:flex-nowrap items-center gap-12 md:gap-[354px]">
+                
+                <div class="info md:col-4 top-effect">
+                    <span class="text-primary">Get Our Application</span>
+                    <h1 class="text-title pt-[10px] pb-[18px]">You Can Easily Find This App..!</h1>
+                    <p class="text-subtitle pb-[36px]">
+                        I say chap that’s suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.
+                    </p>
+                    <div class="button-wrapper flex items-center gap-[20px]">
+                        <button>
+                            <img src="./assets/images/button-app.png" alt="">
+                        </button>
+                        <button>
+                            <img src="./assets/images/button-play.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="img-hero md:absolute md:-top-1/2 md:right-[-15%] left-effect">
+                    <img src="./assets/images/icons/handphone-img.svg" class="w-full h-full anim-bounce" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="news" class="section">
+        <div class="container text-center">
+
+            <div class="top-effect">
+                <span class="text-primary">
+                    Get Our Application
+                </span>
+                <h1 class="text-title">Latest News</h1>
+            </div>
+            
+            <div class="content pt-[80px] right-effect" style="gap: 39px;">
+
+                <div class="card-wrapper flex-wrap md:flex-nowrap">
+                    <div class="card-item w-full md:col-4 pt-0">
+                        <div class="card-header">
+                            <img src="./assets/images/news-1.png" class="w-full max-h-[336px]" alt="">
+                        </div>
+                        <div class="card-content px-1 py-[25px] flex items-start gap-[14px]">
+                            <span class="line w-[39px] h-[1px] bg-[#FFAF2E] mt-3"></span>
+                            <div class="more-details text-left">
+                                <h6>It Does Not Matter Hows Slowly go as Long</h6>
+                                <button class="text-subtitle flex items-center gap-2 pt-6">
+                                    Continue Reading 
+                                    <img src="./assets/images/icons/arrow-right-blue.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item w-full md:col-4 pt-0">
+                        <div class="card-header">
+                            <img src="./assets/images/news-2.png" class="w-full max-h-[336px]" alt="">
+                        </div>
+                        <div class="card-content px-1 py-[25px] flex items-start gap-[14px]">
+                            <span class="line w-[39px] h-[1px] bg-[#FFAF2E] mt-3"></span>
+                            <div class="more-details text-left">
+                                <h6>Netbook Network Added New Photo Filter</h6>
+                                <button class="text-subtitle flex items-center gap-2 pt-6">
+                                    Continue Reading 
+                                    <img src="./assets/images/icons/arrow-right-blue.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item w-full md:col-4 pt-0">
+                        <div class="card-header">
+                            <img src="./assets/images/news-3.png" class="w-full max-h-[336px] rounded-lg" alt="">
+                        </div>
+                        <div class="card-content px-1 py-[25px] flex items-start gap-[14px]">
+                            <span class="line w-[39px] h-[1px] bg-[#FFAF2E] mt-3"></span>
+                            <div class="more-details text-left">
+                                <h6>We Optimised Netbooks Better Navigation</h6>
+                                <button class="text-subtitle flex items-center gap-2 pt-6">
+                                    Continue Reading 
+                                    <img src="./assets/images/icons/arrow-right-blue.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+    </section>
+
+    <section id="footer" class="section flex pt-[74px] pb-[181px] bg-[#2B2B39]">
+        <div class="container">
+
+            <div class="footer-top flex flex-wrap md:flex-nowrap gap-[163px]">
+                <div class="footer-content flex flex-col md:flex-row gap-[64px]">
+                    <ul>
+                        <li class="footer-title">
+                            <span>Home</span>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Community</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Events</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="footer-title">
+                            <span>Resources</span>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Community</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Events</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="footer-title">
+                            <span>Community</span>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Community</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Events</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="footer-title">
+                            <span>Main Links</span>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Community</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Events</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="newsletter">
+                    <span class="footer-title">Subscribe Circkle Newsletter</span>
+                    <p class="newsletter-text">
+                        Subscribe to be the first one to know about updates. Enter your email
+                    </p>
+
+                    <div class="button-form w-full md:w-auto">
+                        <input type="text" placeholder="Email Address" class="w-full md:w-none bg-transparent">
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="copyright" style="background-color: #20202D;">
+        <div class="container">
+
+            <div class="footer-bottom flex-col md:flex-row items-start gap-[18px] md:gap-0">
+                <p class="text-subtitle text-white">Besnik Creative Agency.</p>
+                <img src="./assets/images/netbook-white.png" alt="">
+                <ul class="social-list">
+                    <li>
+                        <a href="#">
+                            <img src="./assets/images/icons/twitter-black.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/images/icons/instagram-black.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/images/icons/facebook-black.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./assets/images/icons/linkedin-black.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- Flowbite JS -->
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     
 </body>
 </html>
