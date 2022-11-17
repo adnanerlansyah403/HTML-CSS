@@ -123,7 +123,7 @@
     
                 <div class="content flex items-end flex-wrap md:flex-nowrap flex-auto gap-[69px]">
                     
-                    <div class="hero-text text-left left-effect">
+                    <div class="hero-text text-left left-effect active">
                         <span class="py-3 px-8 bg-primary-white text-primary rounded-[8px] font-semibold">Netbook community</span>
     
                         <h1 class="pt-[24px] pb-[18px] text-title">Your Solutions for Community</h1>
@@ -137,7 +137,7 @@
                         </div>
                     </div>
     
-                    <div class="object-cover right-effect">
+                    <div class="object-cover right-effect active">
                         <img src="./images/clients.png" class="anim-bounce" alt="">
                     </div>
     
@@ -162,12 +162,15 @@
                     <div class="list-group">
                         <ul class="flex flex-col gap-4">
                             <li class="flex items-center gap-5 li-radio">
+                                <img src="../src/images/icons/list-radio.svg" alt="">
                                 <p>Groups</p>
                             </li>
                             <li class="flex items-center gap-5 li-radio">
+                                <img src="../src/images/icons/list-radio.svg" alt="">
                                 <p>Messages</p>
                             </li>
                             <li class="flex items-center gap-5 li-radio">
+                                <img src="../src/images/icons/list-radio.svg" alt="">
                                 <p>Share</p>
                             </li>
                         </ul>
@@ -268,7 +271,7 @@
     <section id="community" class="section bg-blue-gradient">
         <div class="container text-center">
 
-            <div class="top-effect">
+            <div class="top-effect active">
                 <span class="text-primary">Our Community</span>
                 <h1 class="text-title pt-[9px] pb-[19px]">Community Main Feature</h1>
                 <div class="flex items-center justify-center">
@@ -645,6 +648,17 @@
         </div>
     </section>
     
+    <script>
+
+        const sections = document.body.querySelectorAll('section');
+
+        window.addEventListener("scroll", () => {
+            for(let i = 0; i < sections.length; i++) {
+            }
+        })
+
+    </script>
+
     <!-- Flowbite JS -->
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
 

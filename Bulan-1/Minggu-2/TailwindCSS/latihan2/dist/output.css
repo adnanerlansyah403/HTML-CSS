@@ -1228,21 +1228,22 @@ video {
   background-image: linear-gradient(0deg, rgba(241, 246, 253, 0) 1.63%, #F1F6FD 20.5%, #F1F6FD 58.57%, #FFFFFF 100%);
 }
 
-.li-radio {
-  display: flex;
-  align-items: center;
-}
+/* .li-radio::before {
+        content: url('../images/button-app.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+    } */
 
-.li-radio::before {
-  height: 18px;
-  width: 18px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  --tw-content: url('./assets/images/icons/list-radio.svg');
-  content: var(--tw-content);
-}
+/* .li-radio {
+        @apply before:content-[url('./assets/images/icons/list-radio.svg')] before:bg-no-repeat before:bg-cover before:w-[18px] before:h-[18px] flex items-center
 
-.left-effect {
+    } */
+
+.left-effect.active {
   position: relative;
   animation: leftShow .8s ease-in-out;
 }
@@ -1259,7 +1260,7 @@ video {
   };
 }
 
-.right-effect {
+.right-effect.active {
   position: relative;
   animation: rightShow .8s ease-in-out;
 }
@@ -1276,7 +1277,7 @@ video {
   };
 }
 
-.top-effect {
+.top-effect.active {
   position: relative;
   animation: topShow .8s ease-in-out;
 }
@@ -1293,7 +1294,7 @@ video {
   };
 }
 
-.bottom-effect {
+.bottom-effect.active {
   position: relative;
   animation: bottomShow .8s ease-in-out;
 }
