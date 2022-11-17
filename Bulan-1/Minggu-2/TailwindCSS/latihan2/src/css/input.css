@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer utilities {
+
+    /* BACKGROUND */
+    .bg-prime {
+        @apply bg-[rgba(3,_94,_202,_.2)] overflow-hidden 
+    }
+    .bg-black-prime {
+        @apply bg-[#20202D]
+    }
+
     .li-radio {
         @apply before:content-[url('./assets/images/icons/list-radio.svg')] before:bg-no-repeat before:bg-cover before:w-[18px] before:h-[18px] flex items-center
 
@@ -73,7 +82,39 @@
 }
 
 @layer components {
+    
+    /* NAVBAR */
+
     .nav-wrapper {
         @apply lg:hidden fixed w-full bg-white/90 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:shadow-lg z-30
     }
+    .nav-container {
+        @apply container flex flex-col flex-wrap lg:flex-row items-center justify-between mx-auto gap-4
+    }
+    .nav-header {
+        @apply flex flex-wrap items-center justify-between w-full
+    }
+    .nav-btn-open {
+        @apply inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+    }
+
+    /* HEADER */
+    
+    .header {
+        @apply hidden lg:flex items-center pt-[22px] pb-[26px] bg-white/90 border-b-2 border-gray-300 sticky top-0 z-30
+    }
+
+    /* HERO */
+
+    .hero {
+        @apply bg-[linear-gradient(311.76deg,_#D4E7FE_-15.24%,_#FFFFFF_78.85%)] pt-[60px] md:pt-[110px] lg:pt-0
+    }
+
+    /* FOOTER */
+
+    .footer-wrapper {
+        @apply flex pt-[74px] pb-[181px] bg-[#2B2B39]
+    }
+
+
 }
