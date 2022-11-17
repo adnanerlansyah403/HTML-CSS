@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .li-radio {
+        @apply before:content-[url('./assets/images/icons/list-radio.svg')] before:bg-no-repeat before:bg-cover before:w-[18px] before:h-[18px] flex items-center
+
+    }
+    .col-4 {
+        width: calc(100% / 3);
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-5 {
+        width: calc(100% / 5);
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-8 {
+
+        width: 66.66%;
+    }
+    .col-12 {
+        width: calc(100% * 12 / 12);
+    }
+    .left-effect {
+        position: relative;
+        animation: leftShow .8s ease-in-out;
+    }
+    @keyframes leftShow {
+        from { left: -50%; opacity: 0; }
+        to { left: 0; opacity: 1; };
+    }
+    .right-effect {
+        position: relative;
+        animation: rightShow .8s ease-in-out;
+    }
+    @keyframes rightShow {
+        from { right: -50%; opacity: 0; }
+        to { right: 0; opacity: 1; };
+    }
+    .top-effect {
+        position: relative;
+        animation: topShow .8s ease-in-out;
+    }
+    @keyframes topShow {
+        from { transform: translateY(-10%); opacity: 0; }
+        to { transform: translateY(0);pacity: 1; };
+    }
+    .bottom-effect {
+        position: relative;
+        animation: bottomShow .8s ease-in-out;
+    }
+    @keyframes bottomShow {
+        from { transform: translateY(25%); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; };
+    }
+    .anim-bounce { animation: moving 1s ease-in-out infinite alternate; }
+
+    @keyframes moving {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+    }
+
+    
+}
+
+@layer components {
+    .nav-wrapper {
+        @apply lg:hidden fixed w-full bg-white/90 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 md:shadow-lg z-30
+    }
+}
