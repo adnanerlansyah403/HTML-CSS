@@ -3,6 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: .2s ease-in-out;
 }
 
 body {
@@ -152,19 +153,19 @@ input {
     align-items: center;
     text-align: center;
     cursor: pointer;
+    border-radius: 14px;
 }
 
 .tabs-item button {
     color: #000 !important;
 }
 
-.tabs-item.active {
+.tabs-item:hover {
     background-color: #217BF4;
-    border-radius: 14px;
     cursor: pointer;
 }
 
-.tabs-item.active button {
+.tabs-item:hover button {
     color: #ffffff !important;
 }
 
@@ -178,6 +179,10 @@ input {
     letter-spacing: 0.01em;
 
     color: #FFFFFF;
+}
+
+.text-hover-blue:hover img {
+    filter: invert(31%) sepia(90%) saturate(2063%) hue-rotate(205deg) brightness(102%) contrast(91%);
 }
 
 /* END REUSED STYLES */

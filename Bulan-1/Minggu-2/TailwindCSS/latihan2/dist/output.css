@@ -1205,6 +1205,13 @@ video {
   outline-offset: 2px;
 }
 
+/* EFFECTS */
+
+.text-hover-blue:hover {
+  --tw-text-opacity: 1;
+  color: rgb(33 123 244 / var(--tw-text-opacity));
+}
+
 /* BACKGROUND */
 
 .bg-prime {

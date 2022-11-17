@@ -4,6 +4,12 @@
 
 @layer utilities {
 
+    /* EFFECTS */
+
+    .text-hover-blue {
+        @apply hover:text-primary
+    }
+
     /* BACKGROUND */
     .bg-prime {
         @apply bg-[rgba(3,_94,_202,_.2)] overflow-hidden 
