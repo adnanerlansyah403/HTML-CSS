@@ -10,12 +10,20 @@
         @apply hover:text-primary
     }
 
+    .card-hover-shadow {
+        @apply relative hover:-top-4 hover:shadow-lg
+    }
+
     /* BACKGROUND */
     .bg-prime {
         @apply bg-[rgba(3,_94,_202,_.2)] overflow-hidden 
     }
     .bg-black-prime {
         @apply bg-[#20202D]
+    }
+
+    #community {
+        @apply bg-[linear-gradient(0deg,_rgba(241,_246,_253,_0)_1.63%,_#F1F6FD_20.5%,_#F1F6FD_58.57%,_#FFFFFF_100%)]
     }
 
     .li-radio {

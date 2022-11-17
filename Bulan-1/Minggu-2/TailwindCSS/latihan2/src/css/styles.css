@@ -3,7 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: .2s ease-in-out;
+  transition: .2s ease-in-out !important;
 }
 
 body {
@@ -199,6 +199,20 @@ input {
     line-height: 28px;
     text-align: center;
     color: #656464;
+}
+
+#community .card-wrapper .card-item {
+    /* position: relative; */
+    background: #FFFFFF;
+    box-shadow: 14px 22px 52px -12px rgba(127, 127, 127, 0.13);
+    border-radius: 14px;
+    transition: .3s ease-in-out;
+}
+
+#community .card-wrapper .card-item:hover {
+    transform: translateY(-10px);
+    transition: .3s ease-in;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 #community .card-wrapper .text-subtitle {
