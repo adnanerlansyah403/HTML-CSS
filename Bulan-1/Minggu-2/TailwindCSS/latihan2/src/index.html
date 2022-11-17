@@ -650,11 +650,22 @@
     
     <script>
 
+        const header = document.querySelector('.header');
+        const navbar = document.querySelector('.nav-wrapper');
+
         const sections = document.body.querySelectorAll('section');
 
         window.addEventListener("scroll", () => {
             for(let i = 0; i < sections.length; i++) {
             }
+
+            if(window.scrollY > header.offsetHeight) {
+                header.classList.add('active');
+                navbar.classList.add('active');
+            } else {
+                navbar.classList.remove('active');
+            }
+
         })
 
     </script>

@@ -239,6 +239,14 @@ input {
 
     color: #656464;
 }
+#header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+}
+#header.active {
+    background-color: rgb(255 255 255 / 0.9) !important;
+}
 #header .menu-navigation a.active {
     font-family: 'Inter';
     font-style: normal;
