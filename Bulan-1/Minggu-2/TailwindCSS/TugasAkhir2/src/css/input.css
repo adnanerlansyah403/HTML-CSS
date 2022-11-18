@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    html {
+      font-family: 'Lexend', "sans-serif";
+    }
+
+}
+
+@layer utilities {
+
+    /* WRAPPER */
+    
+
+    .containe {
+        @apply relative px-4 md:px-5 lg:px-[60px] max-w-[1200px]
+    }
+
+    /* COLS */
+
+    .col-12 {
+        width: 100%;
+    }
+
+    .col-8 {
+        width: calc(100% * 8 / 12);
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-4 {
+        width: calc(100% / 3);
+    }
+
+    .col-3 {
+        width: calc(100% * 3 / 12);
+    }
+
+}
+
+@layer components {
+
+    /* Background Green Gradient */
+    .green-gradient {
+        position: absolute;
+        width: 741px;
+        height: 523px;
+        /* left: -173px; */
+        top: -162px;
+    }
+
+    .green-gradient .vector-1 {
+        position: absolute;
+        width: 438px;
+        height: 494px;
+        /* left: 568px; */
+        top: -162px;
+        background: #82FFD2;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+
+    .green-gradient .vector-2 {
+        background: #82F7FF;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+
+    .green-secondary-gradient .vector-1 {
+        position: absolute;
+        width: 438px;
+        height: 494px;
+        left: -100px;
+        top: 2930px;
+        background: #82FFE8;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+    
+    /* Background Orange Gradient */
+    
+    .orange-gradient {
+        /* position: relative; */
+        /* position: absolute; */
+    }
+
+    .orange-gradient .vector-1 {
+        position: absolute;
+        left: 1593px;
+        top: 1574px;
+        width: 438px;
+        height: 494px;
+        background: #FFFA82;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+
+    .orange-gradient .vector-2 {
+        position: absolute;
+        width: 438px;
+        height: 494px;
+        right: -200px;
+        top: 1452px;
+        
+        background: #FF9882;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+
+    .footer-gradient .vector-1 {
+        /* Vector */
+        position: absolute;
+        width: 438px;
+        height: 494px;
+        right: 0;
+        top: 4203px;
+
+        background: #82BBFF;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+
+    .footer-gradient .vector-2 {
+        position: absolute;
+        width: 438px;
+        height: 494px;
+        right: 294px;
+        top: 4268px;
+
+        background: #B9FF82;
+        opacity: 0.3;
+        filter: blur(60px);
+        transform: rotate(90deg);
+    }
+
+    /* BUTTON */
+    .btn {
+        @apply py-[13px] px-[16px] rounded-full
+    }
+
+    .btn-greenPrimary {
+        @apply text-white bg-greenPrimary
+    }
+
+    .btn-greenSecondary {
+        @apply text-greenPrimary bg-greenSecondary
+    }
+
+    .btn-whiteTransparent {
+        @apply text-white bg-whitePurePrimary border border-whitePureSecondary
+    }
+
+}
