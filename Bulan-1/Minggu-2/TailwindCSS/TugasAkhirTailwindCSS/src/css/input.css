@@ -50,7 +50,7 @@
   }
 
   .containe {
-    @apply px-4 md:px-[40px]
+    @apply px-4 md:px-[40px] lg:px-[60px]
   }
 
   /* Columns */

@@ -1001,6 +1001,13 @@ html {
   }
 }
 
+@media (min-width: 1024px) {
+  .containe {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
 /* Columns */
 
 .col-8 {
@@ -1252,6 +1259,10 @@ html {
     align-items: center;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -1296,5 +1307,9 @@ html {
 
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 }
