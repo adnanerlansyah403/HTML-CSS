@@ -25,6 +25,10 @@ padding-block: 100px;
 
 /* NAVMOBILE */
 
+.nav-item {
+    transition: .2s ease-in-out;
+}
+
 .nav-item.active {
     background-color: #6C63FF;
     color: #ffffff;
@@ -41,6 +45,10 @@ padding-block: 100px;
     transform: translateY(0);
     visibility: visible;
     transition: .3s ease-in-out;
+}
+
+.nav-wrapper .nav-item:hover {
+    background-color: lightgray;
 }
 
 /* HERO */

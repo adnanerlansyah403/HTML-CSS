@@ -224,8 +224,12 @@
     /* Desktop */
     
     .nav-desktop {
-      @apply relative opacity-100 left-0 translate-x-0 flex items-center md:gap-[71px] lg:justify-between p-0;
+      @apply relative opacity-100 left-0 translate-x-0 flex items-center justify-between p-0;
       background-color: unset;
+    }
+
+    .nav-desktop a {
+      @apply visible
     }
 
     .nav-w-d {

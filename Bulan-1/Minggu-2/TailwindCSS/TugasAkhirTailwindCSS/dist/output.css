@@ -623,6 +623,10 @@ html {
   margin-top: 21px;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -690,10 +694,6 @@ html {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-\[71px\] {
-  gap: 71px;
 }
 
 .gap-8 {
@@ -1189,24 +1189,14 @@ html {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     align-items: center;
+    justify-content: space-between;
     padding: 0px;
     opacity: 1;
-  }
-
-  @media (min-width: 768px) {
-    .md\:nav-desktop {
-      gap: 71px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .md\:nav-desktop {
-      justify-content: space-between;
-    }
-  }
-
-  .md\:nav-desktop {
     background-color: unset;
+  }
+
+  .md\:nav-desktop a {
+    visibility: visible;
   }
 
   .md\:nav-w-d {
@@ -1290,6 +1280,37 @@ html {
 }
 
 @media (min-width: 1024px) {
+  .lg\:nav-desktop {
+    position: relative;
+    left: 0px;
+    display: flex;
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    opacity: 1;
+    background-color: unset;
+  }
+
+  .lg\:nav-desktop a {
+    visibility: visible;
+  }
+
+  .lg\:nav-w-d {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+
+  .lg\:nav-action-d {
+    visibility: visible;
+    margin: 0px;
+    flex-direction: row;
+  }
+
   .lg\:card-list-d {
     position: relative;
     left: 10%;
@@ -1305,11 +1326,32 @@ html {
     display: block;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
   }
 
+  .lg\:items-center {
+    align-items: center;
+  }
+
   .lg\:justify-end {
     justify-content: flex-end;
+  }
+
+  .lg\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .lg\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
   }
 }

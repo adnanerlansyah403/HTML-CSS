@@ -22,26 +22,29 @@
 
     <header id="header" class="fixed bg-white w-full border-b-2 shadow-md z-50 py-2">
 
-        <div class="containe relative flex items-center justify-between gap-[71px]">
+        <div class="containe relative flex items-center justify-between">
         
-            <a href="#" class="" id="">
+            <a href="#" class="block lg:hidden" id="">
                 <img src="./images/sendpaylogo.png" alt="" class="img-cover">
             </a>
 
-            <div class="nav-mobile md:nav-desktop bg-slate-800 w-full py-4 px-3 transition duration-300 ease-in-out" data-nav-mobile>
-                <ul class="nav-wrapper md:nav-w-d overflow-hidden text-white uppercase font-semibold md:flex md:items-center md:gap-10">
-                    <li class="nav-item active p-2 rounded-md">
+            <div class="nav-mobile lg:nav-desktop bg-slate-800 w-full py-4 px-3 transition duration-300 ease-in-out" data-nav-mobile>
+                <a href="#" class="hidden lg:block" id="">
+                    <img src="./images/sendpaylogo.png" alt="" class="img-cover">
+                </a>
+                <ul class="nav-wrapper lg:nav-w-d overflow-hidden text-white uppercase font-semibold lg:flex lg:items-center lg:gap-10">
+                    <li class="nav-item active p-2 rounded-lg">
                         <a href="#">send money</a>
                     </li>
-                    <li class="nav-item p-2 hover:bg-white/20 rounded-md">
+                    <li class="nav-item p-2 rounded-lg">
                         <a href="#">receive money</a>
                     </li>
-                    <li class="nav-item p-2 hover:bg-white/20 rounded-md">
+                    <li class="nav-item p-2 rounded-lg">
                         <a href="#">language</a>
                     </li>
                 </ul>
-                <div class="nav-action md:nav-action-d mt-8 flex justify-center items-center flex-col gap-8 uppercase font-semibold">
-                    <a href="#" class="md:hidden lg:block text-white md:text-black">How it Works</a>
+                <div class="nav-action lg:nav-action-d mt-8 flex justify-center items-center flex-col gap-8 uppercase font-semibold">
+                    <a href="#" class="md:hidden lg:block text-white lg:text-black">How it Works</a>
                     <div class="button-wrapper">
                         <a href="#" class="btn btn-secondary">
                             Login
@@ -53,7 +56,7 @@
                 </div>
             </div>
 
-            <button class="md:hidden btn btn-nav-open text-4xl" data-nav-open>
+            <button class="lg:hidden btn btn-nav-open text-4xl" data-nav-open>
                 <ion-icon name="menu-outline"></ion-icon>
             </button>
         </div>
