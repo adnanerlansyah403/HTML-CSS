@@ -62,7 +62,7 @@
     .col-12 {
         width: calc(100% * 12 / 12);
     }
-    .left-effect.active {
+    section.active .left-effect {
         position: relative;
         animation: leftShow .8s ease-in-out;
     }
@@ -70,7 +70,7 @@
         from { left: -50%; opacity: 0; }
         to { left: 0; opacity: 1; };
     }
-    .right-effect.active {
+    section.active .right-effect {
         position: relative;
         animation: rightShow .8s ease-in-out;
     }
@@ -78,7 +78,7 @@
         from { right: -50%; opacity: 0; }
         to { right: 0; opacity: 1; };
     }
-    .top-effect.active {
+    section.active .top-effect {
         position: relative;
         animation: topShow .8s ease-in-out;
     }
@@ -86,7 +86,7 @@
         from { transform: translateY(-10%); opacity: 0; }
         to { transform: translateY(0);pacity: 1; };
     }
-    .bottom-effect.active {
+    section.active .bottom-effect {
         position: relative;
         animation: bottomShow .8s ease-in-out;
     }

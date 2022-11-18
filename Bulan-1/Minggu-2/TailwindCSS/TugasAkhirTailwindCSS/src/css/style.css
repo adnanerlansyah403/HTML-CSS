@@ -1,0 +1,70 @@
+/* RESET STYLES */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: unset; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+ul li {
+    list-style-type: none !important;
+}
+
+/* REUSED STYLES */
+
+/* section */
+.section {
+padding-block: 100px;
+}
+
+/* NAVMOBILE */
+
+.nav-item.active {
+    background-color: #6C63FF;
+    color: #ffffff;
+}
+
+.nav-mobile {
+    visibility: hidden;
+    transition: .3s ease-in-out;
+}
+
+.nav-mobile.active {
+    opacity: 1;
+    left: 0;
+    transform: translateY(0);
+    visibility: visible;
+    transition: .3s ease-in-out;
+}
+
+/* HERO */
+section#hero {
+  padding-top: calc(100px + 20px);
+}
+
+/* #TESTIMONIALS */
+
+#testimonials .card-list {
+    padding-block-end: 36px;
+    scroll-snap-type: mandatory;
+}
+
+#testimonials .card-list::-webkit-scrollbar { height: 12px; }
+
+#testimonials .card-list::-webkit-scrollbar-track {
+    border: 1px solid gray;
+    border-radius: 1.5rem;
+}
+
+#testimonials .card-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+}
+
+#testimonials .card-list::-webkit-scrollbar-button { width: calc(50% - 20px); }

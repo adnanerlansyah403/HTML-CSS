@@ -322,7 +322,7 @@
                             <img src="./images/custom-logo.png" alt="">
                         </div>
                         <div class="summary-info">
-                            <h3>List Builder</h3>
+                            <h3>Custom Module</h3>
                             <p class="text-subtitle">
                                 Members, Groups list can be modified by drag & drop live builder.
                             </p>
@@ -656,8 +656,9 @@
         const sections = document.body.querySelectorAll('section');
 
         window.addEventListener("scroll", () => {
-            for(let i = 0; i < sections.length; i++) {
-            }
+            sections.forEach((section, index) => {
+                console.log([window.scrollY, section.offsetHeight])
+            })
 
             if(window.scrollY > header.offsetHeight) {
                 header.classList.add('active');

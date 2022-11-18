@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Akhir - TailwindCS</title>
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Link Output CSS -->
+    <link href="/dist/output.css" rel="stylesheet">
+
+    <!-- Link Custom CSS -->
+    <link rel="stylesheet" href="../src/css/style.css">
+
+</head>
+<body>
+
+    <header id="header" class="fixed bg-white w-full border-b-2 shadow-md z-50 py-2">
+
+        <div class="containe relative flex items-center justify-between gap-[71px]">
+        
+            <a href="#" class="" id="">
+                <img src="./images/sendpaylogo.png" alt="" class="img-cover">
+            </a>
+
+            <div class="nav-mobile md:nav-desktop bg-slate-800 w-full py-4 px-3 transition duration-300 ease-in-out" data-nav-mobile>
+                <ul class="nav-wrapper md:nav-w-d overflow-hidden text-white uppercase font-semibold md:flex md:items-center md:gap-10">
+                    <li class="nav-item active p-2 rounded-md">
+                        <a href="#">send money</a>
+                    </li>
+                    <li class="nav-item p-2 hover:bg-white/20 rounded-md">
+                        <a href="#">receive money</a>
+                    </li>
+                    <li class="nav-item p-2 hover:bg-white/20 rounded-md">
+                        <a href="#">language</a>
+                    </li>
+                </ul>
+                <div class="nav-action md:nav-action-d mt-8 flex justify-center items-center flex-col gap-8 uppercase font-semibold">
+                    <a href="#" class="md:hidden lg:block text-white md:text-black">How it Works</a>
+                    <div class="button-wrapper">
+                        <a href="#" class="btn btn-secondary">
+                            Login
+                        </a>
+                        <a href="#" class="btn btn-primary">
+                            Register
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="md:hidden btn btn-nav-open text-4xl" data-nav-open>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+        </div>
+        
+    </header>
+
+    <main>
+        <article>
+
+            <section id="hero" class="section">
+                <div class="containe">
+
+                    <div class="content flex flex-wrap md:flex-nowrap gap-[72px]">
+
+                        <div class="left left-effect">
+                            <h1 class="text-title relative after:block after:mt-7 after:bg-[rgba(183,_179,_179,_1)] after:w-[52px] after:h-[3px]">
+                                Sending Money is Easier than before
+                            </h1>
+                            <p class="text-subtitle-2 pt-[24px] pb-[54px]">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed consectetur libero. Curabitur.
+                            </p>
+                            <div class="button-wrapper">
+                                <a href="#" class="btn btn-primary">
+                                    Register
+                                </a>
+                                <a href="#" class="btn btn-secondary">
+                                    learn more
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="right flex justify-center w-full right-effect">
+                            <img src="./images/icons/mobile_app.svg" alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="works" class="section">
+                <div class="containe">
+
+                    <div class="content flex flex-wrap text-center">
+
+                        <h1 class="text-title relative after:block after:mt-5 after:bg-[rgba(183,_179,_179,_1)] after:w-[52px] after:h-[3px] after:mx-auto flex-auto">
+                            How it Works
+                        </h1>
+                        <p class="text-subtitle-2 pt-[24px] pb-[54px] w-full">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor.
+                        </p>
+
+                        <div class="pt-20 flex flex-wrap md:flex-nowrap gap-10">
+                            <div class="flex flex-wrap items-center justify-center text-center">
+                                <img src="./images/process1.png" alt="">
+                                <div class="mt-14">
+                                    <h3 class="text-lg-title">In-App-Transfer</h3>
+                                    <p class="text-details pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec p</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center justify-center text-center">
+                                <img src="./images/process2.png" alt="">
+                                <div class="mt-14">
+                                    <h3 class="text-lg-title">In-App-Transfer</h3>
+                                    <p class="text-details pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec p</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center justify-center text-center">
+                                <img src="./images/process3.png" alt="">
+                                <div class="mt-14">
+                                    <h3 class="text-lg-title">In-App-Transfer</h3>
+                                    <p class="text-details pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec p</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="currency" class="section">
+                <div class="containe">
+
+                    <div class="content flex flex-wrap md:justify-between md:flex-nowrap gap-[70px]">
+
+                        <div class="left w-full flex items-center justify-center md:block">
+                            <img src="./images/icons/sign_in.svg" alt="">
+                        </div>
+
+                        <div class="right md:flex-auto">
+                            <h1 class="text-title relative after:block after:mt-7 after:bg-[rgba(183,_179,_179,_1)] after:w-[52px] after:h-[3px]">
+                                Real-time Currency balance check
+                            </h1>
+                            <p class="text-subtitle-2 pt-[36px] pb-[17px]">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed.
+                            </p>
+                            <a href="#" class="btn btn-secondary text-primary font-semibold flex items-center gap-2 w-max">
+                                <span>Read More</span>
+                                <img src="./images/icons/ar-right-icon.svg" class="icon-primary" alt="">
+                            </a>
+                        </div>
+
+                        
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="services" class="section">
+                <div class="containe">
+
+                    <div class="text-center pb-[39px]">
+                        <h1 class="text-title relative after:block after:mt-5 after:bg-[rgba(183,_179,_179,_1)] after:w-[52px] after:h-[3px] after:mx-auto flex-auto">
+                            We are giving Services
+                        </h1>
+                        <p class="text-subtitle-2 pt-[24px] pb-[54px]">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing.
+                        </p>
+                    </div>
+
+                    <div class="content">
+                        <div class="card-list flex flex-wrap gap-[53px] md:grid md:grid-cols-2">
+                            <div class="card-item flex items-start gap-3 max-w-[510px]">
+                                <div class="card-icon">
+                                    <img src="./images/icons/bank-icon.svg" alt="">
+                                </div>
+                                <div class="card-details text-left">
+                                    <h3 class="text-lg-title">Bank Transfer</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a nunc eu.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-item flex items-start gap-3 max-w-[510px] w-full">
+                                <div class="card-icon">
+                                    <img src="./images/icons/timer-icon.svg" alt="">
+                                </div>
+                                <div class="card-details text-left">
+                                    <h3 class="text-lg-title">Fast Transfer</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a nunc eu.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-item flex items-start gap-3 max-w-[510px]">
+                                <div class="card-icon">
+                                    <img src="./images/icons/mobile-icon.svg" alt="">
+                                </div>
+                                <div class="card-details text-left">
+                                    <h3 class="text-lg-title">Mobile Recharge</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a nunc eu.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-item flex items-start gap-3 max-w-[510px]">
+                                <div class="card-icon">
+                                    <img src="./images/icons/truck-icon.svg" alt="">
+                                </div>
+                                <div class="card-details text-left">
+                                    <h3 class="text-lg-title">Easy and Fast</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a nunc eu.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="testimonials" class="bg-primary my-[100px] py-[62px] overflow-hidden">
+                <div class="containe">
+
+                    <div class="hidden md:bg-circle-primary-md"></div>
+                    <div class="hidden md:bg-circle-primary-lg"></div>
+
+                    <div class="content flex flex-wrap md:flex-nowrap gap-[50px] z-30">
+                        <div class="left md:relative md:top-[20px] md:left-[58px]">
+                            <h3 class="text-lg-title-italic relative after:block after:mt-5 after:bg-white after:w-[52px] after:h-[3px] flex-auto md:col-6">
+                                People
+                                Are
+                                Saying
+                                About Us
+                            </h3>
+                            <a href="#" class="text-white flex items-center gap-[11px] pt-3">
+                                <span class="btn-see-all">See All</span>
+                                <figure class="bg-white-circle relative flex items-center justify-center">
+                                    <img src="./images/icons/ar-right-icon.svg" class="w-[13px] h-[27px]" alt="">
+                                </figure>
+                            </a>        
+                        </div>
+                        <div class="card-list lg:card-list-d flex items-center gap-[18px] w-full overflow-x-scroll">
+                            <div class="card-item bg-[#E5E5E5] py-[23px] px-[26px] rounded-lg min-w-[100%]">
+                                <div class="card-details">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.
+                                </div>
+                                <div class="card-user flex items-center gap-[19px] mt-[21px]">
+                                    <figure>
+                                        <img src="./images/testimonial-user2.png" width="59" height="59" alt="">
+                                    </figure>
+                                    <div class="flex flex-col">
+                                        Dev Opter
+                                        <span class="text-gray-400">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-item bg-[#E5E5E5] py-[23px] px-[26px] rounded-lg min-w-[100%]">
+                                <div class="card-details">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.
+                                </div>
+                                <div class="card-user flex items-center gap-[19px] mt-[21px]">
+                                    <figure>
+                                        <img src="./images/testimonial-user1.png" width="59" height="59" alt="">
+                                    </figure>
+                                    <div class="flex flex-col">
+                                        Dev Opter
+                                        <span class="text-gray-400">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-item bg-[#E5E5E5] py-[23px] px-[26px] rounded-lg min-w-[100%]">
+                                <div class="card-details">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo. Nulla varius vitae.
+                                </div>
+                                <div class="card-user flex items-center gap-[19px] mt-[21px]">
+                                    <figure>
+                                        <img src="./images/testimonial-user1.png" width="59" height="59" alt="">
+                                    </figure>
+                                    <div class="flex flex-col">
+                                        Dev Opter
+                                        <span class="text-gray-400">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="py-[60px]">
+        <div class="containe flex flex-wrap lg:flex-nowrap items-start gap-[106px]">
+
+            <div class="footer-brand">
+                <a href="#" class="">
+                    <img src="./images/sendpaylogo.png" width="" height="" alt="">
+                    <p class="text-subtitle-2 pt-[53px] col-8">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in aliquet justo.
+                    </p>
+                </a>
+            </div>
+            <div class="footer-lists flex flex-col md:flex-row gap-[81px] md:gap-0 md:justify-between w-full">
+                <ul class="footer-links flex flex-col gap-10">
+                    <li class="footer-title text-gray-400">
+                        <span>Products</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>Products</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>Products</span>
+                    </li>
+                </ul>
+                <ul class="footer-links flex flex-col gap-10">
+                    <li class="footer-title text-gray-400">
+                        <span>About</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>About</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>About</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>About</span>
+                    </li>
+                </ul>
+                <ul class="footer-links flex flex-col gap-10">
+                    <li class="footer-title text-gray-400">
+                        <span>Catalog</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>Catalog</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>Catalog</span>
+                    </li>
+                    <li class="footer-link">
+                        <span>Catalog</span>
+                    </li>
+                </ul>
+                <ul class="footer-links flex flex-col gap-10 bg-primary py-[29px] px-[20px] text-white rounded-lg w-auto max-w-[223px]">
+                    <li class="footer-title font-bold text-center">
+                        <span>Social Contacts</span>
+                    </li>
+                    <li class="footer-link flex items-center justify-between md:gap-8">
+                        <span>Facebook</span>
+                        <img src="./images/facebook-contact.png" width="57" alt="">
+                    </li>
+                    <li class="footer-link flex items-center justify-between md:gap-8">
+                        <span>Github</span>
+                        <img src="./images/github-contact.png" width="57" alt="">
+                    </li>
+                    <li class="footer-link flex items-center justify-between md:gap-8">
+                        <span>Twitter</span>
+                        <img src="./images/twitter-contact.png" width="57" alt="">
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Script JS -->
+    <script>
+
+        const navMobile = document.querySelector('[data-nav-mobile]');
+        const btnNavOpen = document.querySelector('[data-nav-open]');
+        const header = document.getElementById('header');
+
+        btnNavOpen.addEventListener("click", () => {  
+            navMobile.classList.toggle("active");
+            const attrNavOpen = btnNavOpen.querySelector('ion-icon').getAttribute('name');
+            attrNavOpen === 'menu-outline' ? btnNavOpen.querySelector('ion-icon').setAttribute('name', 'close-outline') : btnNavOpen.querySelector('ion-icon').setAttribute('name', 'menu-outline');
+        })
+
+    </script>
+    
+</body>
+</html>

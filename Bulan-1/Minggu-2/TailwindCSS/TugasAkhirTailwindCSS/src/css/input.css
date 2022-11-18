@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer utilities {
+  
+  .left-effect {
+      position: relative;
+      animation: leftShow .8s ease-in-out;
+  }
+  @keyframes leftShow {
+      from { left: -50%; opacity: 0; }
+      to { left: 0; opacity: 1; };
+  }
+  .right-effect {
+      position: relative;
+      animation: rightShow .8s ease-in-out;
+  }
+  @keyframes rightShow {
+      from { right: -50%; opacity: 0; }
+      to { right: 0; opacity: 1; };
+  }
+  .top-effect {
+      position: relative;
+      animation: topShow .8s ease-in-out;
+  }
+  @keyframes topShow {
+      from { transform: translateY(-10%); opacity: 0; }
+      to { transform: translateY(0);pacity: 1; };
+  }
+  .bottom-effect {
+      position: relative;
+      animation: bottomShow .8s ease-in-out;
+  }
+  @keyframes bottomShow {
+      from { transform: translateY(25%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; };
+  }
+  .anim-bounce { animation: moving 1s ease-in-out infinite alternate; }
+
+  @keyframes moving {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+  }
+
+  .containe {
+    @apply px-4 md:px-[40px]
+  }
+
+  /* Columns */
+  .col-4 {
+    width: calc(100% / 4);
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-8 {
+    width: 75%;
+  }
+
+  /* COLORS */
+
+  .bg-primary {
+    background-color: #6C63FF;
+  }
+
+  .bg-white-circle {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .text-primary {
+    color: #6C63FF;
+  }
+
+  /* TYPOGRAPHY */
+
+  .text-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 54px;
+    color: #000000;
+  }
+
+  .text-subtitle-1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  .text-subtitle-2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+
+    opacity: 0.6;
+  }
+
+  .text-lg-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 33px;
+    color: #000000;
+  }
+
+  .text-lg-title-italic {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 33px;
+    line-height: 40px;
+
+    color: #FFFFFF;
+  }
+
+  .text-details {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #000000;
+
+    opacity: 0.6;
+  }
+
+  .icon-primary {
+    filter: invert(38%) sepia(36%) saturate(2426%) hue-rotate(221deg) brightness(100%) contrast(103%);
+  }
+
+  /* Background */
+  .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+  }
+
+}
+
+@layer components {
+
+    /* GLOBALS */
+
+    .button-wrapper {
+      @apply flex items-center gap-[14px]
+    }
+
+    .btn {
+        @apply py-[10px] px-[18px] bg-transparent border-none outline-none transition duration-300 ease-in-out
+    }
+
+    .btn-secondary {    
+        @apply bg-white text-black;
+        border: 1px solid gray;
+    }
+
+    .btn-primary {
+        @apply bg-[#6C63FF] border-[2px] border-[#B7B3B3] text-white
+    }
+
+    .btn-see-all {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      color: #FFFFFF;
+    }
+
+    .bg-circle-primary-md {
+      position: absolute;
+      display: block;
+      width: 195px;
+      height: 195px;
+      top: 31p;
+      left: 117px;
+      background-color: #E5E5E5;
+      opacity: .25;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .bg-circle-primary-lg {
+      position: absolute;
+      display: block;
+      width: 371px;
+      height: 371px;
+      /* bottom: 165px; */
+      margin-top: 6.5%;
+      left: 362px;
+      background-color: #E5E5E5;
+      opacity: .25;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    /* RESPONSIVE */
+
+    /* Desktop */
+    
+    .nav-desktop {
+      @apply relative opacity-100 left-0 translate-x-0 flex items-center md:gap-[71px] lg:justify-between p-0;
+      background-color: unset;
+    }
+
+    .nav-w-d {
+      @apply text-black flex items-center visible;
+    }
+
+    .nav-action-d {
+      @apply flex-row m-0 visible;
+    }
+
+    /* Card List */
+    .card-list-d {
+      @apply relative left-[10%];
+      overflow: unset !important;
+    }
+
+    .card-list-d .card-item {
+      min-width: min-content !important;
+    }
+
+    /* Mobile */
+
+    .nav-mobile {
+      @apply absolute -left-[105%] -translate-x-[105%] opacity-0 top-[110%]
+    }
+
+}
