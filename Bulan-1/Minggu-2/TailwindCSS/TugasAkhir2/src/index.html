@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <!-- Ion Icons -->
+    
+
 </head>
 <body>
 
@@ -45,39 +48,40 @@
 
         <div class="col-12 mx-auto">
 
-            <div class="w-full absolute top-10 flex items-center justify-between px-[60px]">
+            <div class="w-full absolute lg:relative top-10 flex items-center justify-between px-[1rem] lg:px-[60px]" style="z-index: 50;">
                 <a href="#">
                     <img src="./images/hounterlogo.png" width="115" height="36" alt="">
                 </a>
                 
-                <nav class="navbar flex items-center gap-14">
+                <nav class="navbar lg:navbar-desktop overflow-hidden" data-navbar>
                     <ul class="nav-list flex items-center gap-6">
                         <li>
-                            <a href="#" class="btn btn-bgPrimary">
+                            <a href="#" class="btn-md btn-grayPrimary rounded-0 md:rounded-full hover:btn-greenPrimary lg:btn-whiteTransparent">
                                 About Us
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-bgPrimary">
+                            <a href="#" class="btn-md btn-grayPrimary rounded-0 md:rounded-full hover:btn-greenPrimary lg:btn-whiteTransparent">
                                 Article
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="btn btn-bgPrimary">
-                                About Us
+                            <a href="#" class="btn-md btn-grayPrimary rounded-0 md:rounded-full hover:btn-greenPrimary lg:btn-whiteTransparent">
+                                Property
+                                <img src="./images/icons/white-arrow-bottom.svg" class="img-filter-gray lg:img-filter-white" alt="">
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-greenSecondary">
+                    <a href="#" class="btn-signUp btn btn-greenSecondary">
                         Sign Up
                     </a>
                 </nav>
+
+                <button class="btn btn-toggle" data-nav-toggle>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
             </div>
 
-        </div>
-
-        <div class="col-6 absolute top-0 right-0">
-            <img src="./images/" alt="">
         </div>
 
     </header>
@@ -85,12 +89,128 @@
     <main>
         <article>
 
+            <!-- HERO -->
+
+            <div id="heroWrapper flex items-center relative">
+                <section id="hero" class="section" aria-label="hero">
+                    <div class="container">
+    
+                        <div class="content">
+    
+                            <h1 class="hero-title w-full lg:col-3">
+                                find the place to
+                                live <span class="text-transparent text-white-border">your dreams</span>
+                                easily here
+                            </h1>
+                            <p class="w-full lg:col-4 pt-6 text-graySecondary font-normal">Everything you need about finding your place to live will be here, where it will be easier for you</p>
+    
+                            <form action="" class="py-[32px]">
+                                <div class="button-form">
+                                    <figure class="hidden md:block">
+                                        <img src="./images/icons/maps-orange-icon.svg" alt="">
+                                    </figure>
+                                    <input type="text" placeholder="Search for the location you want!" class="w-full md:w-auto flex-1">
+                                    <button type="submit" class="flex items-center gap-0 lg:gap-1 btn btn-greenPrimary">
+                                        <span>Search</span>
+                                        <img src="./images/icons/white-arrow-right.svg" class="hidden md:block" alt="">
+                                    </button>
+                                </div>
+                            </form>
+    
+                            <p class="text-grayNeutral">Our Partnership</p>
+                            <ul class="companies flex flex-wrap lg:flex-nowrap items-center gap-4 lg:gap-8">
+                                <li>
+                                    <img src="./images/traveloka-logo.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/tiket-logo.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/airbnb-logo.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="./images/trip-logo.png" alt="">
+                                </li>
+                            </ul>
+    
+                        </div>
+    
+                    </div>
+                </section>
+                <div class="hidden lg:block rightHero-wrapper w-1/2 absolute top-0 right-0 h-full rounded-bl-[32px] object-cover h-[750px]" style="background-image: url('./images/hero-bg.png'); background-repeat: no-repeat; background-size: cover;">
+                    <!-- <img src="./images/hero-bg.png" alt="" class="absolute top-0 right-0 rounded-bl-[32px] w-full object-cover"> -->
+                    <div class="card-wrapper hidden 2xl:flex items-center gap-10 absolute bottom-[32px] left-12">
+
+                        <div class="card-item-md flex items-start gap-4">
+                            <div class="card-summary flex self-center justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">        
+                                <img src="./images/featured-user-1.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+                                <img src="./images/featured-user-2.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+                                <img src="./images/featured-user-3.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+                            </div>
+                            <div class="card-details pt-[2px]">
+                                <h3 class="card-title-md">1K+ People</h3>
+                                <p class="card-subtitle-sm">Successfully Getting Home</p>
+                            </div>
+                        </div>
+
+                        <div class="card-item-md flex items-start gap-4">
+                            <div class="card-summary flex self-center justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">        
+                                <img src="./images/home-lg-1.png" class="w-[56px] h-[56px] object-cover rounded-full bg-slate-100" loading="lazy">
+                            </div>
+                            <div class="card-details pt-[2px]">
+                                <h3 class="card-title-md">56 Houses</h3>
+                                <p class="card-subtitle-sm">Sold Monthly</p>
+                            </div>
+                        </div>
+
+                        <div class="card-item-md flex items-start gap-4">
+                            <div class="card-summary flex self-center justify-end sm:justify-start lg:justify-end xl:justify-start">        
+                                <img src="./images/featured-user-1.png" class="object-cover rounded-full bg-slate-100" loading="lazy">
+                            </div>
+                            <div class="card-details pt-[2px]">
+                                <h3 class="card-title-md">4k</h3>
+                                <p class="card-subtitle-sm">Sold Monthly</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURED HOUSE -->
+
+            <div id="featuredHouse" class="section">
+                <div class="container">
+
+                    <h1>Hello Worlds</h1>
+
+                </div>
+            </div>
+
+
         </article>
     </main>
 
     <footer>
 
     </footer>
+
+    <!-- SCRIPTS -->
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+
+        const navbar = document.querySelector('[data-navbar]');
+        const navBtnToggle = document.querySelector('[data-nav-toggle]');
+
+        navBtnToggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        })
+
+    </script>
 
 </body>
 </html>

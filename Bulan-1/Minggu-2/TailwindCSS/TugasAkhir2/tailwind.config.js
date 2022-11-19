@@ -30,6 +30,7 @@ module.exports = {
         blackSecondary: '#3C4563',
         grayPrimary: '#1B1C57',
         graySecondary: '#626687',
+        grayNeutral: '#888B97',
         whitePurePrimary: 'rgba(255, 255, 255, 0.1)',
         whitePureSecondary: 'rgba(255, 255, 255, 0.3)'
       },
@@ -38,14 +39,14 @@ module.exports = {
         'circle': '50%'
       }
     },
-    // container: {
-    //   padding: {
-    //     sm: '16px',
-    //     md: '32px',
-    //     lg: '60px',
-    //   },
-    //   center: true,
-    // },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '16px',
+        md: '32px',
+        lg: '60px',
+      },
+    },
   },
   plugins: [],
 }

@@ -7,10 +7,67 @@
     html {
       font-family: 'Lexend', "sans-serif";
     }
+    
+    /* REPONSIVE */
+
+    /* responsive for device small than 768px */
+
+    /* NAVBAR */
+
+    .navbar {
+        @apply lg:hidden bg-white absolute -left-[110%] -translate-x-[110%] top-[150%] border border-[#888B97] rounded-[1.5rem] pb-4 opacity-0 transition duration-300 ease-in-out;
+        width: calc(100% - 40px); 
+        left: 16px;
+    }
+
+    .navbar.active {
+        @apply left-0 translate-x-0 opacity-100 transition duration-300 ease-in-out;
+        left: 16px !important;
+    }
+
+    .navbar ul {
+        @apply block;
+    }
+
+    .navbar ul li a {
+        @apply bg-transparent border-none
+    }
+
+    .navbar .btn-signUp {
+        @apply ml-2 mt-2 inline-block
+    }
+
+    .navbar-desktop {
+        all: unset;
+        @apply flex gap-14 2xl:-translate-x-[250px];
+    }
+
+    .navbar-desktop ul {
+        all: unset;
+        @apply flex gap-6;
+    }
+
+    .navbar-desktop ul li a {
+        @apply text-white bg-whitePurePrimary border border-whitePureSecondary
+    }
+
+    .navbar-desktop .btn-signUp {
+        @apply -mt-1 m-0 inline-block
+    }
 
 }
 
 @layer utilities {
+
+    /* Section s*/
+
+    .section {
+        @apply py-[120px]
+    }
+
+    #hero {
+        @apply py-[216px]
+    }
 
     /* WRAPPER */
     
@@ -33,12 +90,57 @@
         width: 50%;
     }
 
+    .col-5 {
+        width: calc(100% * 5 / 12);
+    }
+
     .col-4 {
         width: calc(100% / 3);
     }
 
     .col-3 {
         width: calc(100% * 3 / 12);
+    }
+
+    /* BACKGROUND */
+
+    .img-filter-gray {
+        filter: invert(59%) sepia(10%) saturate(315%) hue-rotate(191deg) brightness(92%) contrast(89%);
+    }
+
+    .img-filter-white {
+        filter: invert(100%) sepia(70%) saturate(1495%) hue-rotate(184deg) brightness(117%) contrast(109%);
+    }
+
+    /* Typography */
+
+    /* Radius */
+
+    .rounded-0 {
+        border-radius: 0;
+    }
+
+    .text-white-border {
+        color: #ffffff;
+        text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+        /* -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black; */
+    }
+
+    .hero-title {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+        text-transform: capitalize;
+
+        /* MRT App / Headline */
+
+        color: #1B1C57;
     }
 
 }
@@ -86,11 +188,6 @@
     }
     
     /* Background Orange Gradient */
-    
-    .orange-gradient {
-        /* position: relative; */
-        /* position: absolute; */
-    }
 
     .orange-gradient .vector-1 {
         position: absolute;
@@ -146,7 +243,11 @@
 
     /* BUTTON */
     .btn {
-        @apply py-[13px] px-[16px] rounded-full
+        @apply py-[13px] px-[16px] rounded-full flex items-center gap-1
+    }
+
+    .btn-md {
+        @apply py-2 px-4 rounded-full flex items-center gap-1
     }
 
     .btn-greenPrimary {
@@ -159,6 +260,38 @@
 
     .btn-whiteTransparent {
         @apply text-white bg-whitePurePrimary border border-whitePureSecondary
+    }
+
+    .btn-grayPrimary {
+        @apply text-grayNeutral bg-white border border-[#E0E3EB] rounded-[32px]
+    }
+
+    .button-form {
+        @apply flex justify-between items-center py-1 pr-1 pl-6 gap-6 max-w-[496px] bg-white border border-[#E0E3EB] rounded-[32px]
+    }
+
+    .btn-toggle {
+        @apply lg:hidden px-4 py-2 text-grayNeutral bg-white rounded-[.5rem];
+        border: 1px solid #D1FAE5;
+    }
+
+    /* CARD */
+
+    .card-item-lg {
+        @apply flex items-center p-8 gap-4 max-w-[612px] bg-white rounded-[16px]
+    }
+
+
+    .card-item-md {
+        @apply flex items-center p-6 gap-4 max-w-max bg-white rounded-[32px]
+    }
+
+    .card-title-md {
+        @apply font-semibold text-sm leading-6 text-[#1B1C57] text-[16px]
+    }
+
+    .card-subtitle-sm {
+        @apply font-normal text-xs leading-[20px] text-[#68799F]
     }
 
 }
