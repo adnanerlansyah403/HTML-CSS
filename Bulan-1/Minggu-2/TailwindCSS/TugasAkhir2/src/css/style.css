@@ -10,7 +10,7 @@
 }
 
 body {
-    overflow: hidden !important;
+    overflow-x: hidden !important;
 }
 
 a {
@@ -26,8 +26,8 @@ input,
 textarea,
 button
 {
-    border: none;
-    outline: none;
+    /* border: none;
+    outline: none; */
     background: transparent;
 }
 
