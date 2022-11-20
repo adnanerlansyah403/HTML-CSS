@@ -7,10 +7,10 @@
     <title>House Hunter - Web Design</title>
 
     <!-- Output TailwindCSS -->
-    <link href="/dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,9 +48,9 @@
 
         <div class="col-12 mx-auto">
 
-            <div class="btn bg-whiteTransparent lg:bg-none w-full fixed flex items-center justify-between lg:top-10 py-4 lg:py-0 px-[1rem] lg:px-[60px]" style="z-index: 50;">
+            <div class="btn bg-whiteTransparent lg:bg-transparent w-full fixed lg:absolute flex items-center justify-between lg:top-10 py-4 lg:py-0 px-[1rem] lg:px-[60px]" style="z-index: 50;">
                 <a href="#">
-                    <img src="./images/hounterlogo.png" width="115" height="36" alt="">
+                    <img src="./src/images/hounterlogo.png" width="115" height="36" alt="">
                 </a>
                 
                 <nav class="navbar lg:navbar-desktop overflow-hidden" data-navbar>
@@ -68,7 +68,7 @@
                         <li>
                             <a href="#" class="btn-md btn-grayPrimary rounded-0 md:rounded-full hover:btn-greenPrimary lg:btn-whiteTransparent">
                                 Property
-                                <img src="./images/icons/white-arrow-bottom.svg" class="img-filter-gray lg:img-filter-white" alt="">
+                                <img src="./src/images/icons/white-arrow-bottom.svg" class="img-filter-gray lg:img-filter-white" alt="">
                             </a>
                         </li>
                     </ul>
@@ -95,7 +95,7 @@
                 <section id="hero" class="section" aria-label="hero">
                     <div class="container">
     
-                        <div class="content">
+                        <div class="content pt-24">
     
                             <h1 class="hero-title w-full lg:col-3">
                                 find the place to
@@ -107,12 +107,12 @@
                             <form action="" class="py-[32px]">
                                 <div class="button-form">
                                     <figure class="hidden md:block">
-                                        <img src="./images/icons/maps-orange-icon.svg" alt="">
+                                        <img src="./src/images/icons/maps-orange-icon.svg" alt="">
                                     </figure>
                                     <input type="text" placeholder="Search for the location you want!" class="w-full md:w-auto flex-1">
                                     <button type="submit" class="flex items-center gap-0 lg:gap-1 btn btn-greenPrimary">
                                         <span>Search</span>
-                                        <img src="./images/icons/white-arrow-right.svg" class="hidden md:block" alt="">
+                                        <img src="./src/images/icons/white-arrow-right.svg" class="hidden md:block" alt="">
                                     </button>
                                 </div>
                             </form>
@@ -120,16 +120,16 @@
                             <p class="text-grayNeutral">Our Partnership</p>
                             <ul class="companies flex flex-wrap lg:flex-nowrap items-center gap-4 lg:gap-8">
                                 <li>
-                                    <img src="./images/traveloka-logo.png" alt="">
+                                    <img src="./src/images/traveloka-logo.png" alt="">
                                 </li>
                                 <li>
-                                    <img src="./images/tiket-logo.png" alt="">
+                                    <img src="./src/images/tiket-logo.png" alt="">
                                 </li>
                                 <li>
-                                    <img src="./images/airbnb-logo.png" alt="">
+                                    <img src="./src/images/airbnb-logo.png" alt="">
                                 </li>
                                 <li>
-                                    <img src="./images/trip-logo.png" alt="">
+                                    <img src="./src/images/trip-logo.png" alt="">
                                 </li>
                             </ul>
     
@@ -137,15 +137,15 @@
     
                     </div>
                 </section>
-                <div class="hidden lg:block rightHero-wrapper w-1/2 absolute top-0 right-0 h-full rounded-bl-[32px] object-cover h-[750px]" style="background-image: url('./images/hero-bg.png'); background-repeat: no-repeat; background-size: cover;">
-                    <!-- <img src="./images/hero-bg.png" alt="" class="absolute top-0 right-0 rounded-bl-[32px] w-full object-cover"> -->
+                <div class="hidden lg:block rightHero-wrapper w-1/2 absolute top-0 right-0 h-full rounded-bl-[32px] object-cover" style="background-image: url('./src/images/hero-bg.png'); background-repeat: no-repeat; background-size: cover;">
+                    <!-- <img src="./src/images/hero-bg.png" alt="" class="absolute top-0 right-0 rounded-bl-[32px] w-full object-cover"> -->
                     <div class="card-wrapper hidden 2xl:flex items-center gap-10 absolute bottom-[32px] left-12">
 
                         <div class="card-item-md flex items-start gap-4">
                             <div class="card-summary flex self-center justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">        
-                                <img src="./images/featured-user-1.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
-                                <img src="./images/featured-user-2.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
-                                <img src="./images/featured-user-3.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+                                <img src="./src/images/featured-user-1.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+                                <img src="./src/images/featured-user-2.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
+                                <img src="./src/images/featured-user-3.png" class="object-cover rounded-full bg-slate-100 ring-2 ring-white" loading="lazy">
                             </div>
                             <div class="card-details pt-[2px]">
                                 <h3 class="card-title-md">1K+ People</h3>
@@ -155,7 +155,7 @@
 
                         <div class="card-item-md flex items-start gap-4">
                             <div class="card-summary flex self-center justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">        
-                                <img src="./images/home-lg-1.png" class="w-[56px] h-[56px] object-cover rounded-full bg-slate-100" loading="lazy">
+                                <img src="./src/images/home-lg-1.png" class="w-[56px] h-[56px] object-cover rounded-full bg-slate-100" loading="lazy">
                             </div>
                             <div class="card-details pt-[2px]">
                                 <h3 class="card-title-md">56 Houses</h3>
@@ -165,7 +165,7 @@
 
                         <div class="card-item-md flex items-start gap-4">
                             <div class="card-summary flex self-center justify-end sm:justify-start lg:justify-end xl:justify-start">        
-                                <img src="./images/featured-user-1.png" class="object-cover rounded-full bg-slate-100" loading="lazy">
+                                <img src="./src/images/featured-user-1.png" class="object-cover rounded-full bg-slate-100" loading="lazy">
                             </div>
                             <div class="card-details pt-[2px]">
                                 <h3 class="card-title-md">4k</h3>
@@ -189,29 +189,29 @@
                         <ul class="flex items-center gap-8">
                             <li>
                                 <button class="bg-none flex items-center gap-1 md:btn md:btn-greenSecondary font-semibold">
-                                    <img src="./images/icons/green-house-icon.svg" alt="">
+                                    <img src="./src/images/icons/green-house-icon.svg" alt="">
                                     <span>House</span>
                                 </button>
                             </li>
                             <li>
                                 <button class="bg-none flex items-center gap-1 md:btn md:btn-whitePrimary font-semibold">
-                                    <img src="./images/icons/gray-villa-icon.svg" alt="">
+                                    <img src="./src/images/icons/gray-villa-icon.svg" alt="">
                                     <span>Villa</span>
                                 </button>
                             </li>
                             <li>
                                 <button class="bg-none flex items-center gap-1 md:btn md:btn-whitePrimary font-semibold">
-                                    <img src="./images/icons/gray-apartment-icon.svg" alt="">
+                                    <img src="./src/images/icons/gray-apartment-icon.svg" alt="">
                                     <span>Apartment</span>
                                 </button>
                             </li>
                         </ul>
                         <div class="navigation hidden lg:flex items-center gap-4">
-                            <button class="btn btn-greenPrimary rounded-full">
-                                <img src="./images/icons/white-arrow-right.svg" alt="">
+                            <button class="btn btn-grayPrimary rounded-full">
+                                <img src="./src/images/icons/arrow-left-gray.svg" alt="">
                             </button>
-                            <button class="btn btn-graySecondary rounded-full">
-                                <img src="./images/icons/white-arrow-right.svg" alt="">
+                            <button class="btn btn-greenPrimary rounded-full">
+                                <img src="./src/images/icons/white-arrow-right.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
                         <div class="card-item">
                             <div class="card-header relative h-max">
                                 <figure>
-                                    <img src="./images/featured-img-home-1.png" class="w-full md:w-auto rounded-lg" alt="">
+                                    <img src="./src/images/featured-img-home-1.png" class="w-full md:w-auto rounded-lg" alt="">
                                 </figure>
                                 <span class="badge badge-danger absolute bottom-[16px] left-[16px]">Popular</span>
                             </div>
@@ -229,7 +229,7 @@
                                 <h3 class="font-medium xl3">Roselands House</h3>
                                 <p class="font-medium xl2 pb-6 pt-2 text-[#3C4563]">$ 35.000.000</p>
                                 <div class="user flex items-center gap-4">
-                                    <img src="./images/featured-user-1.png" alt="">
+                                    <img src="./src/images/featured-user-1.png" alt="">
                                     <div class="space-y-1">
                                         <h4 class="font-medium text-xl">Dianne Russel</h4>
                                         <p class="grayNeutral text-gray-sm">Manchester, Kentucky</p>
@@ -241,7 +241,7 @@
                         <div class="card-item">
                             <div class="card-header relative h-max">
                                 <figure>
-                                    <img src="./images/featured-img-home-2.png" class="w-full md:w-auto rounded-lg" alt="">
+                                    <img src="./src/images/featured-img-home-2.png" class="w-full md:w-auto rounded-lg" alt="">
                                 </figure>
                                 <span class="badge badge-info absolute bottom-[16px] left-[16px]">New House</span>
                             </div>
@@ -249,7 +249,7 @@
                                 <h3 class="font-medium xl3">Woodlandside</h3>
                                 <p class="font-medium xl2 pb-6 pt-2 text-[#3C4563]">$ 20.000.000</p>
                                 <div class="user flex items-center gap-4">
-                                    <img src="./images/featured-user-2.png" alt="">
+                                    <img src="./src/images/featured-user-2.png" alt="">
                                     <div class="space-y-1">
                                         <h4 class="font-medium text-xl">Robert Fox</h4>
                                         <p class="grayNeutral text-gray-sm">Dr. San Jose, South Dakota</p>
@@ -261,7 +261,7 @@
                         <div class="card-item">
                             <div class="card-header relative h-max">
                                 <figure>
-                                    <img src="./images/featured-img-home-3.png" class="w-full md:w-auto rounded-lg" alt="">
+                                    <img src="./src/images/featured-img-home-3.png" class="w-full md:w-auto rounded-lg" alt="">
                                 </figure>
                                 <span class="badge badge-success absolute bottom-[16px] left-[16px]">Best Sells</span>
                             </div>
@@ -269,7 +269,7 @@
                                 <h3 class="font-medium xl3">The Old Lighthouse</h3>
                                 <p class="font-medium xl2 pb-6 pt-2 text-[#3C4563]">$ 44.000.000</p>
                                 <div class="user flex items-center gap-4">
-                                    <img src="./images/featured-user-3.png" alt="">
+                                    <img src="./src/images/featured-user-3.png" alt="">
                                     <div class="space-y-1">
                                         <h4 class="font-medium text-xl">Ronald Richards</h4>
                                         <p class="grayNeutral text-gray-sm">Santa Ana, Illinois</p>
@@ -281,7 +281,7 @@
                         <div class="card-item">
                             <div class="card-header relative h-max">
                                 <figure>
-                                    <img src="./images/featured-img-home-3.png" class="w-full md:w-auto rounded-lg" alt="">
+                                    <img src="./src/images/featured-img-home-3.png" class="w-full md:w-auto rounded-lg" alt="">
                                 </figure>
                                 <span class="badge badge-danger absolute bottom-[16px] left-[16px]">Popular</span>
                             </div>
@@ -289,7 +289,7 @@
                                 <h3 class="font-medium xl3">Cosmo's House</h3>
                                 <p class="font-medium xl2 pb-6 pt-2 text-[#3C4563]">$ 22.000.000</p>
                                 <div class="user flex items-center gap-4">
-                                    <img src="./images/featured-user-4.png" alt="">
+                                    <img src="./src/images/featured-user-4.png" alt="">
                                     <div class="space-y-1">
                                         <h4 class="font-medium text-xl">Jenny Wilson</h4>
                                         <p class="grayNeutral text-gray-sm">Preston Rd. Inglewood, Maine 98380</p>
@@ -317,32 +317,32 @@
                                 <h5 class="font-bold text-[16px] text-[#1B1C57]">House Details</h5>
                                 <ul class="pt-4 flex flex-wrap items-center lg:grid lg:grid-cols-2 lg:col-6 gap-4">
                                     <li class="flex items-center gap-2 lg:gap-4">
-                                        <img src="./images/icons/bed-gray-icon.svg" alt="">
+                                        <img src="./src/images/icons/bed-gray-icon.svg" alt="">
                                         <span>4 Bedrooms</span>
                                     </li>
                                     <li class="flex items-center gap-2 lg:gap-4">
-                                        <img src="./images/icons/bath-gray-icon.svg" alt="">
+                                        <img src="./src/images/icons/bath-gray-icon.svg" alt="">
                                         <span>4 Bathest</span>
                                     </li>
                                     <li class="flex items-center gap-2 lg:gap-4">
-                                        <img src="./images/icons/carport-gray-icon.svg" alt="">
+                                        <img src="./src/images/icons/carport-gray-icon.svg" alt="">
                                         <span>1 Carport</span>
                                     </li>
                                     <li class="flex items-center gap-2 lg:gap-4">
-                                        <img src="./images/icons/floors-gray-icon.svg" alt="">
+                                        <img src="./src/images/icons/floors-gray-icon.svg" alt="">
                                         <span>4 Floors</span>
                                     </li>
                                 </ul>
                                 <div class="contact flex items-center gap-8 lg:gap-[56px] mt-8 pt-8 border-t border-[#F0F3FD] w-max">
                                     <div class="user-info flex items-center gap-6">
-                                        <img src="./images/featured-user-1.png" class="hidden md:block" alt="">
+                                        <img src="./src/images/featured-user-1.png" class="hidden md:block" alt="">
                                         <div class="space-y-1">
                                             <h4 class="font-medium text-xl">Dianne Russel</h4>
                                             <p class="grayNeutral text-gray-sm">Manager Director</p>
                                         </div>
                                     </div>
                                     <button class="contact-button btn btn-greenPrimary">
-                                        <img src="./images/icons/telp-gray-icon.svg" class="hidden lg:block" alt="">
+                                        <img src="./src/images/icons/telp-gray-icon.svg" class="hidden lg:block" alt="">
                                         <span>Contact Now</span>
                                     </button>
                                 </div>
@@ -350,11 +350,11 @@
                         </div>
                         <div class="right w-full lg:max-w-[528px] relative">
                             <div class="images">
-                                <img src="./images/video-home-review.png" class="w-full lg:w-[488px]" alt="">
+                                <img src="./src/images/video-home-review.png" class="w-full lg:w-[488px]" alt="">
                                 <div class="image-group hidden lg:flex items-end gap-3 absolute -bottom-[25px] -left-[75px]" style="align-items: flex-end;">
-                                    <img src="./images/home-review-md.png" alt="">
-                                    <img src="./images/home-review-sm-1.png" alt="">
-                                    <img src="./images/home-review-sm-2.png" alt="">
+                                    <img src="./src/images/home-review-md.png" alt="">
+                                    <img src="./src/images/home-review-sm-1.png" alt="">
+                                    <img src="./src/images/home-review-sm-2.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -376,12 +376,12 @@
                     </div>
 
                     <div class="content pt-10">
-                        <div class="card-wrapper flex items-center gap-14 lg:absolute w-full lg:-left-[40%] 2xl:-left-[25%]">
+                        <div class="card-wrapper flex items-center gap-14 lg:absolute w-full lg:-left-[40%] 2xl:-left-[10%]">
 
                             <div class="card-item lg:relative min-w-full lg:min-w-max">
                                 <div class="card-img">
                                     <figure>
-                                        <img src="./images/home-review-lg-1.png" alt="" class="w-full lg:max-w-max">
+                                        <img src="./src/images/home-review-lg-1.png" alt="" class="w-full lg:max-w-max">
                                     </figure>
                                 </div>
                                 <div class="card-bg p-8 md:-translate-y-[72px] rounded-lg bg-white shadow-md max-w-[612px] mx-auto">
@@ -391,13 +391,13 @@
                                     </p>
                                     <div class="contact w-full flex items-end justify-between gap-8 lg:gap-[56px]">
                                         <div class="user-info flex items-center gap-6 w-full">
-                                            <img src="./images/featured-user-1.png" class="" alt="">
+                                            <img src="./src/images/featured-user-1.png" class="" alt="">
                                             <div class="space-y-1">
                                                 <h4 class="font-medium text-xl">Dianne Russel</h4>
                                                 <p class="grayNeutral text-gray-sm">Manager Director</p>
                                             </div>
                                             <div class="flex flex-1 items-end justify-end">
-                                                <img src="./images/icons/star-orange-icon.svg" alt="">
+                                                <img src="./src/images/icons/star-orange-icon.svg" alt="">
                                                 &nbsp; 4.8
                                             </div>
                                         </div>
@@ -407,7 +407,7 @@
                             <div class="card-item lg:relative min-w-full lg:min-w-max">
                                 <div class="card-img">
                                     <figure>
-                                        <img src="./images/home-review-lg-1.png" alt="" class="w-full lg:max-w-max">
+                                        <img src="./src/images/home-review-lg-1.png" alt="" class="w-full lg:max-w-max">
                                     </figure>
                                 </div>
                                 <div class="card-bg p-8 md:-translate-y-[72px] rounded-lg bg-white shadow-md max-w-[612px] mx-auto">
@@ -417,13 +417,13 @@
                                     </p>
                                     <div class="contact w-full flex items-end justify-between gap-8 lg:gap-[56px]">
                                         <div class="user-info flex items-center gap-6 w-full">
-                                            <img src="./images/featured-user-1.png" class="" alt="">
+                                            <img src="./src/images/featured-user-1.png" class="" alt="">
                                             <div class="space-y-1">
                                                 <h4 class="font-medium text-xl">Dianne Russel</h4>
                                                 <p class="grayNeutral text-gray-sm">Manager Director</p>
                                             </div>
                                             <div class="flex flex-1 items-end justify-end">
-                                                <img src="./images/icons/star-orange-icon.svg" alt="">
+                                                <img src="./src/images/icons/star-orange-icon.svg" alt="">
                                                 &nbsp; 4.8
                                             </div>
                                         </div>
@@ -433,7 +433,7 @@
                             <div class="card-item lg:relative min-w-full lg:min-w-max">
                                 <div class="card-img">
                                     <figure>
-                                        <img src="./images/home-review-lg-1.png" alt="" class="w-full lg:max-w-max">
+                                        <img src="./src/images/home-review-lg-1.png" alt="" class="w-full lg:max-w-max">
                                     </figure>
                                 </div>
                                 <div class="card-bg p-8 md:-translate-y-[72px] rounded-lg bg-white shadow-md max-w-[612px] mx-auto">
@@ -443,13 +443,13 @@
                                     </p>
                                     <div class="contact w-full flex items-end justify-between gap-8 lg:gap-[56px]">
                                         <div class="user-info flex items-center gap-6 w-full">
-                                            <img src="./images/featured-user-1.png" class="" alt="">
+                                            <img src="./src/images/featured-user-1.png" class="" alt="">
                                             <div class="space-y-1">
                                                 <h4 class="font-medium text-xl">Dianne Russel</h4>
                                                 <p class="grayNeutral text-gray-sm">Manager Director</p>
                                             </div>
                                             <div class="flex flex-1 items-end justify-end">
-                                                <img src="./images/icons/star-orange-icon.svg" alt="">
+                                                <img src="./src/images/icons/star-orange-icon.svg" alt="">
                                                 &nbsp; 4.8
                                             </div>
                                         </div>
@@ -468,25 +468,25 @@
             <section id="newsletter" class="section">
                 <div class="container" style="max-width: inherit;">
 
-                    <div class="bg-wrapper relative rounded-lg block mx-auto col-12 max-w-[1200px] h-[312px] px-4 py-6" style="background-image: url(./images/background-blue-gradient.png); background-repeat: no-repeat;">
+                    <div class="bg-wrapper relative rounded-lg block mx-auto col-12 max-w-[1200px] h-[312px] px-4 py-6" style="background-image: url(./src/images/background-blue-gradient.png); background-repeat: no-repeat;">
 
                         <figure class="hidden lg:block absolute top-8 left-[44px]">
-                            <img src="./images/chair.png" width="81" height="81" class="rounded-lg" alt="">
+                            <img src="./src/images/chair.png" width="81" height="81" class="rounded-lg" alt="">
                         </figure>
                         <figure class="hidden lg:block absolute bottom-[103px] left-[67px]">
-                            <img src="./images/featured-user-1.png" width="36" height="36" class="rounded-full" alt="">
+                            <img src="./src/images/featured-user-1.png" width="36" height="36" class="rounded-full" alt="">
                         </figure>
                         <figure class="hidden lg:block absolute top-[71px] left-[201px]">
-                            <img src="./images/featured-user-2.png" width="36" height="36" class="rounded-lg" alt="">
+                            <img src="./src/images/featured-user-2.png" width="36" height="36" class="rounded-lg" alt="">
                         </figure>
                         <figure class="hidden lg:block absolute top-[44px] right-[200px]">
-                            <img src="./images/house.png" width="70" height="70" class="rounded-lg" alt="">
+                            <img src="./src/images/house.png" width="70" height="70" class="rounded-lg" alt="">
                         </figure>
                         <figure class="hidden lg:block absolute bottom-[60px] right-[73px]">
-                            <img src="./images/chair.png" width="81" height="81" class="rounded-lg" alt="">
+                            <img src="./src/images/chair.png" width="81" height="81" class="rounded-lg" alt="">
                         </figure>
                         <figure class="hidden lg:block absolute top-8 left-[44px]">
-                            <img src="./images/chair.png" width="55" height="55" class="rounded-lg" alt="">
+                            <img src="./src/images/chair.png" width="55" height="55" class="rounded-lg" alt="">
                         </figure>
 
                         <div class="content flex flex-col items-center justify-center h-full">
@@ -497,7 +497,7 @@
                             </h1>
 
                             <form class="button-newsletter mt-12">
-                                <img src="./images/icons/email-blue-icon.svg" class="hidden md:block" alt="">
+                                <img src="./src/images/icons/email-blue-icon.svg" class="hidden md:block" alt="">
                                 <input type="text" placeholder="Your email here...">
                                 <button type="submit" class="btn btn-greenPrimary">Subcribe</button>
                             </form>
@@ -513,35 +513,35 @@
     </main>
 
     <footer class="pt-[120px] pb-[120px]">
-        <div class="container flex flex-wrap items-start gap-10">
+        <div class="container flex flex-wrap lg:flex-nowrap items-start gap-10" style="max-width: inherit;">
 
             <div class="footer-brand">
                 <figure>
-                    <img src="./images/hounterlogo.png" alt="">
+                    <img src="./src/images/hounterlogo.png" alt="">
                 </figure>
-                <p class="pt-4 pb-6 lg:col-4">
+                <p class="pt-4 pb-6 lg:col-6">
                     We provide information about properties such as houses, villas and apartments to help people find their dream home
                 </p>
-                <ul class="social-media flex items-center gap-6">
+                <ul class="socials flex items-center gap-6">
                     <li>
                         <a href="#">
-                            <img src="./images/icons/facebook-gray-icon.svg" alt="">
+                            <img src="./src/images/icons/facebook-gray-icon.svg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./images/icons/twitter-gray-icon.svg" alt="">
+                            <img src="./src/images/icons/twitter-gray-icon.svg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./images/icons/instagram-gray-icon.svg" alt="">
+                            <img src="./src/images/icons/instagram-gray-icon.svg" alt="">
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footer-list w-full flex flex-col md:flex-row items-start lg:items-center justify-between gap-8">
+            <div class="footer-list w-full flex flex-col md:flex-row items-start justify-between md:justify-evenly gap-8">
                 <ul class="footer-links flex flex-col gap-[18px]">
                     <li class="footer-title mb-6">
                         <span>Property</span>
@@ -568,17 +568,22 @@
                     </li>
                     <li class="footer-link">
                         <a href="#" class="text-grayNeutral">
-                            House
+                            New Article
                         </a>
                     </li>
                     <li class="footer-link">
                         <a href="#" class="text-grayNeutral">
-                            Apartment
+                            Popular Article
                         </a>
                     </li>
                     <li class="footer-link">
                         <a href="#" class="text-grayNeutral">
-                            Villa
+                            Most Read
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="#" class="text-grayNeutral">
+                            Tips & Tricks
                         </a>
                     </li>
                 </ul>
@@ -587,19 +592,19 @@
                         <span>Contact</span>
                     </li>
                     <li class="footer-link">
-                        <a href="#" class="text-grayNeutral">
-                            House
-                        </a>
+                        <p class="text-grayNeutral">
+                            2464 Royal Ln. Mesa, New Jersey 45463
+                        </p>
                     </li>
                     <li class="footer-link">
-                        <a href="#" class="text-grayNeutral">
-                            Apartment
-                        </a>
+                        <p class="text-grayNeutral">
+                            (671) 555-0110
+                        </p>
                     </li>
                     <li class="footer-link">
-                        <a href="#" class="text-grayNeutral">
-                            Villa
-                        </a>
+                        <p class="text-grayNeutral">
+                            info@hounter.com
+                        </p>
                     </li>
                 </ul>
             </div>

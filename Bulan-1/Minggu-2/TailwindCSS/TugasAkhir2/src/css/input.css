@@ -66,8 +66,8 @@
         @apply py-[120px]
     }
 
-    #hero {
-        /* @apply pt-[120px] pb-[0] */
+    #featuredHouse {
+        @apply pt-[530px]
     }
 
     #newsletter {
@@ -279,7 +279,7 @@
         width: 438px;
         height: 494px;
         right: -100px;
-        top: 5300px;
+        bottom: 0;
 
         background: #82BBFF;
         opacity: 0.3;

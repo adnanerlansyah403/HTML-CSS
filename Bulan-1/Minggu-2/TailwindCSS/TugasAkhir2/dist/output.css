@@ -704,7 +704,7 @@ html {
   width: 438px;
   height: 494px;
   right: -100px;
-  top: 5300px;
+  bottom: 0;
   background: #82BBFF;
   opacity: 0.3;
   filter: blur(60px);
@@ -770,12 +770,6 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(136 139 151 / var(--tw-text-opacity));
-}
-
-.btn-graySecondary {
-  border-radius: 32px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 227 235 / var(--tw-bg-opacity));
 }
 
 .button-form {
@@ -1060,10 +1054,6 @@ html {
   height: 100%;
 }
 
-.h-\[750px\] {
-  height: 750px;
-}
-
 .h-\[56px\] {
   height: 56px;
 }
@@ -1342,6 +1332,10 @@ html {
   padding-bottom: 120px;
 }
 
+.pt-24 {
+  padding-top: 6rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1438,8 +1432,8 @@ html {
   padding-bottom: 120px;
 }
 
-#hero {
-  /* @apply pt-[120px] pb-[0] */
+#featuredHouse {
+  padding-top: 530px;
 }
 
 @media (min-width: 1024px) {
@@ -1649,6 +1643,10 @@ html {
     flex-direction: row;
   }
 
+  .md\:justify-evenly {
+    justify-content: space-evenly;
+  }
+
   .md\:rounded-full {
     border-radius: 9999px;
   }
@@ -1755,10 +1753,6 @@ html {
     flex-wrap: nowrap;
   }
 
-  .lg\:items-center {
-    align-items: center;
-  }
-
   .lg\:justify-end {
     justify-content: flex-end;
   }
@@ -1783,8 +1777,8 @@ html {
     gap: 56px;
   }
 
-  .lg\:bg-none {
-    background-image: none;
+  .lg\:bg-transparent {
+    background-color: transparent;
   }
 
   .lg\:py-0 {
@@ -1829,8 +1823,8 @@ html {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:-left-\[25\%\] {
-    left: -25%;
+  .\32xl\:-left-\[10\%\] {
+    left: -10%;
   }
 
   .\32xl\:flex {
