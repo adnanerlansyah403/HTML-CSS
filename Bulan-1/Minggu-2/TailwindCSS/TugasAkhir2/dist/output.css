@@ -901,8 +901,6 @@ html {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  /* or 171% */
-  /* MRT App / Neutral 01 */
   color: #626687;
 }
 
@@ -952,10 +950,6 @@ html {
 
 .left-\[45\%\] {
   left: 45%;
-}
-
-.-left-\[25\%\] {
-  left: -25%;
 }
 
 .mx-auto {
@@ -1013,22 +1007,8 @@ html {
   width: max-content;
 }
 
-.w-min {
-  width: -moz-min-content;
-  width: min-content;
-}
-
 .max-w-\[612px\] {
   max-width: 612px;
-}
-
-.max-w-max {
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-
-.max-w-\[740px\] {
-  max-width: 740px;
 }
 
 .flex-1 {
@@ -1444,10 +1424,6 @@ html {
 }
 
 @media (min-width: 768px) {
-  .md\:-left-\[40\%\] {
-    left: -40%;
-  }
-
   .md\:btn {
     display: flex;
     align-items: center;
@@ -1635,10 +1611,6 @@ html {
 }
 
 @media (min-width: 1280px) {
-  .xl\:-left-\[25\%\] {
-    left: -25%;
-  }
-
   .xl\:justify-start {
     justify-content: flex-start;
   }
