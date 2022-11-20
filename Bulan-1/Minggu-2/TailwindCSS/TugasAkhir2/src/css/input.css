@@ -66,7 +66,7 @@
     }
 
     #hero {
-        @apply py-[216px]
+        @apply pt-[120px] pb-[0]
     }
 
     /* WRAPPER */
@@ -80,6 +80,14 @@
 
     .col-12 {
         width: 100%;
+    }
+
+    .col-11 {
+        width: calc(100% * 11 / 12);
+    }
+
+    .col-9 {
+        width: calc(100% * 9 / 12);
     }
 
     .col-8 {
@@ -130,7 +138,7 @@
     }
     
     .section-subtitle {
-        @apply flex items-center relative before:absolute before:block before:w-[32px] before:h-[1px] before:bg-[#F59E0B] before:-left-[42px];
+        @apply flex items-center relative before:hidden lg:before:absolute lg:before:block lg:before:w-[32px] lg:before:h-[1px] lg:before:bg-[#F59E0B] lg:before:-left-[42px];
         font-family: 'Lexend';
         font-style: normal;
         font-weight: 500;
@@ -138,6 +146,19 @@
         line-height: 18px;
         text-transform: capitalize;
         color: #F59E0B;
+    }
+    
+    .section-subtitle.lt {
+        @apply lg:before:absolute lg:before:block lg:before:w-[32px] lg:before:h-[1px] lg:before:bg-[#F59E0B] before:-top-[15px] before:left-[30px];
+    }
+
+    .text-gray-sm {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #888B97;
     }
 
     /* Radius */
@@ -232,8 +253,7 @@
         width: 438px;
         height: 494px;
         right: -200px;
-        top: 1452px;
-        
+        top: 1552px;
         background: #FF9882;
         opacity: 0.3;
         filter: blur(60px);
@@ -310,7 +330,7 @@
     }
 
     .badge {
-        @apply flex items-center gap-4 max-w-max py-2 px-4 rounded-lg;
+        @apply flex items-center gap-4 max-w-max py-2 px-4 rounded-pill;
     }
 
     .badge-danger {
@@ -339,9 +359,33 @@
     .card-title-md {
         @apply font-semibold text-sm leading-6 text-[#1B1C57] text-[16px]
     }
+    
+    .card-title-lg {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        text-transform: capitalize;
+        color: #1B1C57;
+    }
 
     .card-subtitle-sm {
         @apply font-normal text-xs leading-[20px] text-[#68799F]
+    }
+
+    .card-subtitle-md {
+        font-family: 'Lexend';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        /* or 171% */
+
+
+        /* MRT App / Neutral 01 */
+
+        color: #626687;
     }
 
 }
